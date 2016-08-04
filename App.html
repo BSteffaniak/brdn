@@ -93,6 +93,18 @@
 		    <script src="App.js"></script>
 			<script>
 				getSitemap().loadControllers();
+				
+				function linkedinLoaded() {
+					console.log("Linked in loaded");
+					console.log("Received arguments: ", arguments.length);
+					for (var i = 0; i < arguments.length; i++) {
+						console.log(arguments[i]);
+					}
+				}
+			</script>
+			<script type="text/javascript" src="//platform.linkedin.com/in.js">
+			    api_key:   788zjw2z3lk4m6
+			    onLoad:    linkedinLoaded
 			</script>
 		</div>
 	</body>
