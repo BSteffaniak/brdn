@@ -225,39 +225,12 @@ p.red, span.red, .red {
        url('Shared/Fonts/AvenirNext-Regular.svg#AvenirNext-Regular') format('svg'); /* Legacy iOS */
 }
 
-@media (min-width: 400px) {
-	.slide {
-		padding: 0 0px;
-	}
-	
-	#braden {
-		font-size: 50px;
-	}
-	
-	.profile-image {
-		width: 50px;
-		height: 50px;
-	}
-	
-	div.social > a > img {
-		height: 25px;
-	}
-	
-	div.social {
-		margin-top: 6px;
-	}
-	
-	div.social > a {
-		margin: 0 3px;
-	}
-}
-
 .slide {
 	padding: 0 10px;
 }
 
 #braden {
-	font-size: 120px;
+	font-size: 100px;
 	
 	margin-top: 20px;
 	
@@ -280,7 +253,6 @@ div.social {
 div.social > a {
 	margin: 0 5px;
 }
-
 
 @media (min-width: 700px) {
 	.slide {
