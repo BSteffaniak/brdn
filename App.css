@@ -1490,11 +1490,17 @@ body:not(.web) > a.facade-url {
 pre {
 	margin: 10px 15px;
 	
-	padding: 5px 20px 5px 10px;
+	padding: 10px 20px;
 	
 	display: inline-block;
 	
 	border-radius: 6px;
+	
+	max-width: 100%;
+	
+	overflow: auto;
+	
+	box-sizing: border-box;
 }
 
 pre p, pre a, pre h1, pre h2, pre h3, pre h4, pre h5, pre h6, pre span, pre div {
