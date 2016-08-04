@@ -93,10 +93,18 @@
 				
 				function linkedinLoaded() {
 					console.log("Linked in loaded");
-					console.log("Received arguments: ", arguments.length);
-					for (var i = 0; i < arguments.length; i++) {
-						console.log(arguments[i]);
-					}
+					
+					var url = "/people/~?format=json";
+					
+					IN.API.Raw()
+			            .url(url)
+			            .method("POST")
+			            .result(function (result) {
+			                console.log(result);
+			            })
+			            .error(function (error) {
+			                console.log(error);
+			            });
 				}
 			</script>
 			<script type="text/javascript" src="//platform.linkedin.com/in.js">
