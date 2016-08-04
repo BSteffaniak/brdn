@@ -225,6 +225,10 @@ p.red, span.red, .red {
        url('Shared/Fonts/AvenirNext-Regular.svg#AvenirNext-Regular') format('svg'); /* Legacy iOS */
 }
 
+.date {
+	margin-top: -15px;
+}
+
 .slide {
 	padding: 0 10px;
 }
