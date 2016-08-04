@@ -1,0 +1,155 @@
+#splash-screen div[ui-view] {
+	display: block;
+	
+	background-color: #79c843;
+	
+	text-align: center;
+	
+	position: relative;
+	
+	height: 100%;
+}
+
+body#splash-screen .button,
+body#login .button {
+	color: #79c843;
+	
+	background-color: white;
+}
+
+#splash-screen #login-button,
+#splash-screen #signup-button {
+	height: 58px;
+	line-height: 46px;
+}
+
+body#splash-screen.web .adaptive-width {
+	width: 100%;
+}
+
+body#splash-screen div[ui-view],
+body#sign-up div[ui-view],
+body#login div[ui-view] {
+	height: 100%;
+}
+
+#splash-screen-container {
+	position: absolute;
+	
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+/*
+body#login ::-webkit-input-placeholder {
+   text-align: center;
+}
+
+body#login :-moz-placeholder {
+   text-align: center;  
+}
+
+body#login ::-moz-placeholder {
+   text-align: center;  
+}
+
+body#login :-ms-input-placeholder {  
+   text-align: center; 
+}
+*/
+
+div.green-container input::-webkit-input-placeholder { /* Safari, Chrome and Opera */
+	color: white;
+	opacity: 1 !important;
+}
+
+div.green-container input:-moz-placeholder,
+div.green-container ::-moz-placeholder { /* Firefox 19+ */
+	color: white;
+	opacity: 1 !important;
+}
+
+div.green-container input:-ms-input-placeholder, /* IE 10+ */
+div.green-container input::-ms-input-placeholder { /* Edge */
+	color: white;
+	opacity: 1 !important;
+}
+
+.green-container .button {
+	margin-bottom: 15px;
+	
+	border: none;
+	
+	background-color: white;
+	
+	color: #79c843;
+	
+	padding: 4px;
+}
+
+body#splash-screen .button {
+	font-size: 30px;
+	
+	width: 300px;
+}
+
+div.green-container .input-container {
+	background-color: #79c843;
+	
+	border: 2px solid white;
+	
+	margin: 0;
+	margin-bottom: 15px;
+	
+	width: 100%;
+	
+	padding: 6px 0;
+}
+
+div.green-container .input-container > input {
+	color: white;
+	
+	text-align: center;
+	
+	display: block;
+}
+
+#logo {
+	width: 150px;
+	/*height: 350px;*/
+}
+
+.green-container #logo {
+	margin-bottom: 15px;
+}
+
+.green-container > p,
+.green-container form > p,
+.green-container div > p {
+	color: white;
+}
+
+body#login #logo {
+	margin-bottom: 20px;
+}
+
+#logo-text {
+	font-family: 'Avenir Next Regular';
+	font-size: 70px;
+	
+	line-height: 1;
+	
+	color: white;
+	
+	margin: 0;
+	
+	margin-bottom: 20px;
+}
+
+a#forgot-password {
+	font-size: 12px;
+	
+	color: white;
+}

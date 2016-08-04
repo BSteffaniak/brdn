@@ -1,0 +1,14 @@
+<table class="select-table">
+    <tr>
+        <td class="no-select" ng-bind="label"></td>
+        <td><img src="Shared/Images/right-carrot.svg" class="carrot" /></td>
+    </tr>
+</table>
+<div class="select-options slide-in" ng-class="{ active: active }" ng-style="{ 'background-color': backgroundColor }">
+    <div ng-if="page" class="page-container" ui-view="{{ page }}"></div>
+    <table ng-if="!page" ng-style="{ height: options.length * (100 / 6.0) + '%', 'padding-top': options.length > 6 ? '4px' : '0' }">
+        <tr class="option" ng-repeat="option in options" ng-click="optionSelected($event, option)">
+            <td ng-class="{ overlay: ngModel != option, darken: ngModel == option }" ng-bind="option"></td>
+        </tr>
+    </table>
+</div>

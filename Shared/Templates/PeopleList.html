@@ -1,0 +1,27 @@
+<table>
+	<tr ng-repeat="person in list | orderBy:order:reverse | limitTo: limit" class="person-row" tr-link profile="{ id: person.id }" tr-link-disabled="usingAction" ng-click="usingAction && performAction(person)">
+		<td class="icon-container">
+			<img class="friend-list-image thumbnail" ng-class="{ 'paq-leader': person.paqLeader }" ng-src="{{ person.id | userImage }}"></img>
+		</td>
+		<td>
+			<div>
+				<span class="friend-name" ng-class="{ 'paq-leader': person.paqLeader }" ng-bind="person.fullName"></span>
+			</div>
+			<div>
+				<span class="username" ng-bind="person.username"></span>
+			</div>
+		</td>
+		<td ng-if="person.status != null" class="status-container">
+			<div ng-if="(person.status | type) === 'boolean'" class="label going-status fixed-width" ng-class="{ green: person.status, red: !person.status }" ng-bind="person.status | goingStatus"></div>
+			<p ng-if="(person.status | type) === 'string'" class="dark-gray" ng-bind="person.status"></p>
+			<p ng-if="person.requestSent" class="bold dark-gray">SENT</p>
+			<div ng-if="!person.isFriend && person.id != session.user.id" ng-click="sendFriendRequest(person); $event.stopPropagation();" class="label add-friend" ng-class="{ 'light-gray': person.requestSent, 'gray': !person.requestSent }">ADD FRIEND</div>
+		</td>
+		<td class="score-container">
+			<animated-number number="person.score || 0"></animated-number>
+		</td>
+	</tr>
+	<tr ng-if="!list || list.length == 0">
+		<td ng-bind="defaultMessage || 'nothing to show'"></td>
+	</tr>
+</table>

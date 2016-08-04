@@ -1,0 +1,14 @@
+<wolfpaq-header elements="header.elements">
+	<search></search>
+</wolfpaq-header>
+<div class="padded-container">
+	<input class="search" type="text" focused placeholder="search..." ng-model="models.searchText" listen-delay="500" listener="search(models.searchText)" />
+	<div ng-if="!(models.searchText.length > 0) && suggestedFriends.length > 0">
+		<p>Suggested friends</p>
+		<people-list list="suggestedFriends"></people-list>
+	</div>
+	<div ng-if="models.searchText.length > 0">
+		<p ng-if="models.searchingText.length > 0" ng-bind="models.searchingText"></p>
+		<people-list ng-if="searchResults" list="searchResults" default-message="models.resultsMessage"></people-list>
+	</div>
+</div>

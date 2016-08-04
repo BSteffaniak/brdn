@@ -1,0 +1,17 @@
+<wolfpaq-header elements="header.elements"></wolfpaq-header>
+<wolfpaq-menu ng-model="menu.elements"></wolfpaq-menu>
+<div id="sign-up-controls">
+	<a href="#/SignUp/Password" class="left-arrow"><img src="Shared/Images/Left-arrow.svg" /></a>
+	<a href="#/SignUp/FullName" class="right-arrow">skip</a>
+</div>
+<div class="container green-container">
+	<form url="SignUp/FullName" onsubmit="return submitFunction(event)">
+	    <div class="sign-up-img"><img class="notebook" src="Shared/Images/notebook.svg"/></div><br>
+	    <div ng-if="platform == 'web'" class="input-container">
+	        <input type="text" ui-mask="(?9?9?9) ?9?9?9-?9?9?9?9" on-enter="next()" focused ng-model="session.signup.phoneNumber"/>
+	    </div>
+	    <br>
+	    <input type="submit" tabindex="2" id="next-button" class="next button" value="verify" />
+		<p ng-if="error.length > 0" class="error" ng-bind="error"></p>
+	</form>
+</div>

@@ -1,0 +1,17 @@
+<div class="wolfpaq-popup-background"></div>
+<table class="wolfpaq-popup-container">
+	<tr>
+		<td class="wolfpaq-popup-td">
+			<div class="wolfpaq-popup">
+				<div>
+					<span class="header" ng-bind="header | uppercase"></span>
+				</div>
+				<tr-separator thickness="1px" color="black"></tr-separator>
+				<div ng-repeat="header in headers">
+					<a ng-click="redirect(links[$index])" ng-bind="header"></a>
+					<div ng-if="!$last" class="separator"></div>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>

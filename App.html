@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html ng-app="trApp">
+	<head>
+		<meta charset="utf-8"/>
+		
+	    <link rel="stylesheet" type="text/css" href="App.css">
+	    <link rel="stylesheet" type="text/css" href="Shared/Styles/WolfpaqElements.css">
+	    <link rel="stylesheet" type="text/css" href="SplashScreen/SplashScreen.css">
+	    <link rel="stylesheet" type="text/css" href="SignUp/SignUp.css">
+	    <link rel="stylesheet" type="text/css" href="Search/Search.css">
+		
+	    <link rel="stylesheet" type="text/css" href="Shared/Libraries/CSS/bootstrap-material-datetimepicker.css">
+	    <link rel="stylesheet" type="text/css" href="Shared/Libraries/CSS/bootstrap-material-icon.css">
+	    <link rel="icon" type="img/ico" href="Shared/Images/favicon.png">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.8, user-scalable=no">
+		
+		<title>brdn</title>
+		
+	    <script src="Shared/Libraries/JS/angular.js"></script>
+	    <script src="Shared/Libraries/JS/angular-ui-router.min.js"></script>
+	    <!--<script src="Shared/Libraries/JS/route-styles.js"></script>-->
+	    <script src="Shared/Libraries/JS/ngStorage.min.js"></script>
+		<script src="Shared/Libraries/JS/FitText/js/ng-FitText.js"></script>
+	    <script src="Shared/Libraries/JS/mask.min.js"></script>
+	    <script src="Shared/Libraries/JS/angular-animate.min.js"></script>
+	    <script src="Shared/Libraries/JS/jquery-2.1.4.min.js"></script>
+	    <script src="Shared/Libraries/JS/moment.min.js"></script>
+	    <script src="Shared/Libraries/JS/bootstrap-material-datetimepicker.js"></script>
+	    <script src="Shared/Libraries/JS/d3.mod.js"></script>
+	    <script src="Shared/Libraries/JS/common.js"></script>
+		<script src="Shared/Libraries/JS/Sitemap.js"></script>
+		<script src="Shared/Libraries/JS/angular-bind-html-compile.js"></script>
+	</head>
+	<body ng-controller="App" ng-cloak ng-init="pageLoaded()" ng-attr-id="{{ currentPage.name | classify }}" ng-class="{ 'no-select': menu.dragging, loading: !loaded, web: mobileStyle === false, mobile: mobileStyle === true }" when-ready="pageLoaded()" wait-for-interpolation="true" ready-check="checkLoaded()">
+		<div id="page-wrapper">
+			<div id="content" ng-class="{ unfocused: optionsData.visible, full: !header.visible }" ng-click="menu.open = false">
+				<div id="page-container">
+					<div id="view-table" ng-style="{ height: contentHeight }">
+						<div ng-attr-id="{{ view.name | classify }}" class="view" ng-style="{ left: ($index * 100) + '%', 'overflow-y': !currentSection || currentSection == view ? 'auto' : 'hidden' }"  ng-repeat="view in views" ng-scroll ng-scroll-down="menu.visible = false" ng-scroll-up="menu.visible = true">
+							<div ui-view="{{ view.pageName }}"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		    <!-- Modules -->
+		    <script src="AppModule.js"></script>
+			
+		    <!-- Routing -->
+		    <script src="RouteConfig.js"></script>
+			
+		    <!-- Factories -->
+		    <script src="Shared/Factories/cacheFactory.js"></script>
+			
+		    <!-- Services -->
+		    <script src="Shared/Services/Analytics.js"></script>
+		    <script src="Shared/Services/Server.js"></script>
+		    <script src="Shared/Services/Utils.js"></script>
+		    <script src="Shared/Services/MQL.js"></script>
+		    <script src="Shared/Services/LoginUtils.js"></script>
+		    <script src="Shared/Services/RegisterUtils.js"></script>
+		    <script src="Shared/Services/DataShare.js"></script>
+		    <script src="Shared/Services/HappeningUtils.js"></script>
+		    <script src="Shared/Services/WolfpaqUtils.js"></script>
+			
+		    <!-- Filters -->
+		    <script src="Shared/Filters/Capitalize.js"></script>
+		    <script src="Shared/Filters/Date.js"></script>
+		    <script src="Shared/Filters/ToTrusted.js"></script>
+		    <script src="Shared/Filters/FormatPhoneNumber.js"></script>
+		    <script src="Shared/Filters/WolfpaqUtility.js"></script>
+			
+		    <!-- Directives -->
+		    <script src="Shared/Directives/DoubleClick.js"></script>
+		    <script src="Shared/Directives/DatePicker.js"></script>
+		    <script src="Shared/Directives/TimePicker.js"></script>
+		    <script src="Shared/Directives/Happening.js"></script>
+		    <script src="Shared/Directives/AttendeeList.js"></script>
+		    <script src="Shared/Directives/Popup.js"></script>
+		    <script src="Shared/Directives/Separator.js"></script>
+		    <script src="Shared/Directives/Accordion.js"></script>
+		    <script src="Shared/Directives/WolfpaqList.js"></script>
+		    <script src="Shared/Directives/PeopleList.js"></script>
+		    <script src="Shared/Directives/HeaderLink.js"></script>
+		    <script src="Shared/Directives/Draggable.js"></script>
+		    <script src="Shared/Directives/Checkbox.js"></script>
+		    <script src="Shared/Directives/SettingsList.js"></script>
+		    <script src="Shared/Directives/LineChart.js"></script>
+		    <script src="Shared/Directives/Howl.js"></script>
+		    <script src="Shared/Directives/Select.js"></script>
+			
+		    <!-- Controllers -->
+		    <script src="App.js"></script>
+			<script>
+				getSitemap().loadControllers();
+			</script>
+		</div>
+	</body>
+</html>

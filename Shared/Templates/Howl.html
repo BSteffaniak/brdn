@@ -1,0 +1,15 @@
+<div class="howl" tr-link chat howl="howl" ng-style="{ 'background-image': 'url(\'' + (howl.id | defaultHowlImage) + '\')' }">
+    <div class="overlay">
+        <table>
+            <tr>
+                <td>
+                    <img tr-link profile="howl.creator" class="icon" ng-src="{{ howl.creator.id | userImage }}" />
+                </td>
+                <td class="details">
+                    <p class="green when" ng-bind="howl.when | capitalize"></p>
+                    <p><span tr-link profile="howl.creator" class="blue who" ng-bind="howl.creator.fullName"></span> wants to <span class="blue what" ng-bind="howl.what"></span>.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

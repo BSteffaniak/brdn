@@ -1,0 +1,28 @@
+<table>
+	<tr ng-repeat="wolfpaq in list">
+		<td>
+			<div class="fullsize-photo-container" tr-link wolfpaq="wolfpaq" tr-link-disabled="action" ng-click="performAction($event, wolfpaq)">
+				<img class="photo" ng-src="{{ wolfpaq.id | wolfpaqImage }}"/>
+				<div class="photo-overlay" ng-style="{ height: overlayHtml && selected == wolfpaq ? '100%' : 'auto' }">
+					<table ng-style="{ height: overlayHtml && selected == wolfpaq ? '100%' : 'auto' }">
+						<tr ng-if="overlayHtml && selected == wolfpaq">
+							<td colspan="2" class="list-overlay" ng-bind-html="overlayHtml"></td>
+						</tr>
+						<tr>
+							<td>
+								<p class="wolfpaq-full-name" ng-bind="wolfpaq.name"></p>
+								<p class="wolfpaq-name" ng-bind="wolfpaq.tag | wolfpaqName"></p>
+							</td>
+							<td>
+								<p class="member-count">{{ wolfpaq.members.length }} <img ng-src="{{ wolfpaq.restriction | wolfpaqRestrictionImageSrc | greenImage }}" /></p>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</td>
+	</tr>
+	<tr ng-if="!list || list.length == 0">
+		<td ng-bind="defaultMessage || 'Nothing to show'"></td>
+	</tr>
+</table>

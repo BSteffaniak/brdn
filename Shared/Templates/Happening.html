@@ -1,0 +1,34 @@
+<div tr-link happening="happening" double-click class="happening" ng-style="{ 'background-image': 'url(\'' + (happening.id | defaultHappeningImage) + '\')' }" ng-click="happening.active = (happening.invited || happening.restriction == null) ? !happening.active : happening.active" ng-class="{ active: happening.active, going: happening.going == true, 'not-going': happening.going == false }">
+	<div class="overlay">
+		<table>
+			<tr>
+				<td class="description-container">
+					<p class="title" ng-bind="happening.name"></p>
+					<p class="location" ng-bind="happening.location.name"></p>
+					<!--<p class="creator">Created by <span class="username" ng-bind="happening.creator.username"></span></p>-->
+					<p ng-if="happening.wolfpaq" class="tag wolfpaq-name" ng-bind="happening.wolfpaq.name | wolfpaqName"></p>
+					<div ng-if="!happening.wolfpaq" class="invite-list">
+						<img ng-repeat="user in happening.invites" ng-src="{{ user.id | userImage }}" class="bare thumbnail" />
+					</div>
+				</td>
+				<td class="date-container">
+					<p class="date" ng-bind="happening.startTime | shortenDate | capitalize"></p>
+					<p class="date-words" ng-bind="happening.startTime | dateToWords | capitalize"></p>
+					<img ng-if="happening.restriction == 'Invite'" class="restriction" src="Shared/Images/lock.png"/>
+				</td>
+			</tr>
+		</table>
+		<div ng-if="happening.invited || happening.restriction == null">
+			<table>
+				<tr>
+					<td>
+						<div class="button square-right going-button" ng-class="{ 'no-right-border': happening.going === null || happening.going === true, active: happening.going === true }" ng-click="setUserGoing(happening, true); $event.stopPropagation();"><p>Going</p></div><div class="button square-left not-going-button" ng-class="{ 'no-left-border': happening.going === false, active: happening.going === false }" ng-click="setUserGoing(happening, false); $event.stopPropagation();"><p>Not Going</p></div>
+					</td>
+					<td>
+						<p class="double-tap-text">double tap to<br>view happening</p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

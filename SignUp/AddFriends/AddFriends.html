@@ -1,0 +1,25 @@
+<wolfpaq-header elements="header.elements"></wolfpaq-header>
+<wolfpaq-menu ng-model="menu.elements"></wolfpaq-menu>
+<div id="sign-up-controls">
+	<a href="#/SignUp/ProfilePicture" class="left-arrow"><img src="Shared/Images/Left-arrow.svg" /></a>
+</div>
+<div class="container green-container">
+	<form onsubmit="return submitFunction(event)">
+	    <p>contacts on <span class="heavy">wolfpaq</span></p>
+		<p>invite to <span class="heavy">wolfpaq</span></p>
+		<table style="width: 100%">
+			<tr ng-repeat="contact in contacts">
+				<td>
+					<p ng-bind="contact.name"></p>
+					<p ng-bind="contact.number"></p>
+				</td>
+				<td>
+					<button class="button">INVITE</button>
+				</td>
+			</tr>
+		</table>
+	    <div class="input-container"><input type="text" focused placeholder="Choose a username" ng-model="session.signup.username"/></div><br>
+		<input type="submit" class="button" ng-bind="success == null ? 'loading...' : 'finish'" />
+		<p ng-if="error.length > 0" class="error" ng-bind="error"></p>
+	</form>
+</div>

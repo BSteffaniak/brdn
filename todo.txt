@@ -1,0 +1,5 @@
+chat toggle
+Update PeopleList to be more flexible with content
+Update wolfpaq members list attributes
+create wolfpaq
+setup live page structure

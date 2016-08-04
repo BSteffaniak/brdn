@@ -1,0 +1,14 @@
+<div class="settings-list-container">
+    <table class="settings-list">
+        <tbody ng-repeat="section in sections" class="section">
+            <tr class="section-header" ng-class="{ disabled: section.disabled }">
+                <td ng-bind="section.name | uppercase"></td>
+            </tr>
+            <tr ng-repeat="setting in section.settings" class="setting" ng-class="{ disabled: setting.disabled }">
+                <td bind-html-compile="setting.text"></td>
+                <td ng-if="setting.slider" class="setting-slider">slider here</td>
+                <td ng-if="setting.icon" class="setting-icon"><img ng-src="{{ setting.icon.src }}" /></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

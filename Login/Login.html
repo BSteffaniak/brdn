@@ -1,0 +1,13 @@
+<wolfpaq-header elements="header.elements"></wolfpaq-header>
+<wolfpaq-menu ng-model="menu.elements"></wolfpaq-menu>
+<div id="login-container">
+	<div id="contents-container">
+		<img id="logo" src="Shared/Images/wolfpaq-logo-white.svg"/><br>
+		<div class="input-container"><input tabindex="1" focused on-enter="submit()" type="text" placeholder="Username" ng-model="username"/></div><br>
+		<div class="input-container password-container"><input tabindex="2" on-enter="submit()" type="password" class="password" type="password" placeholder="Password" ng-model="password"/></div><br>
+		<p ng-if="errorText.length > 0" class="error-text" ng-bind="errorText"></p>
+		<button tabindex="3" class="login button" ng-click="submit()" ng-keyup="$event.keyCode == 13 && submit()"><p>log in</p></button>
+		<p class="large-text">or</p>
+		<button tabindex="4" class="login button"><p>log in with</p></button>
+	</div>
+</div>

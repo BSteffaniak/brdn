@@ -1,0 +1,294 @@
+body#sign-up.web .adaptive-width,
+body#email.web .adaptive-width,
+body#name.web .adaptive-width,
+body#password.web .adaptive-width,
+body#phone-number.web .adaptive-width,
+body#profile-picture.web .adaptive-width,
+body#username.web .adaptive-width,
+body#full-name.web .adaptive-width,
+body#add-friends.web .adaptive-width {
+	width: 100%;
+}
+
+body#sign-up div[ui-view],
+body#email div[ui-view],
+body#name div[ui-view],
+body#password div[ui-view],
+body#phone-number div[ui-view],
+body#profile-picture div[ui-view],
+body#username div[ui-view],
+body#full-name div[ui-view],
+body#add-friends div[ui-view],
+body#forgot-password div[ui-view] {
+	background-color: #79c843;
+	
+	overflow-x: hidden;
+	
+	height: 100%;
+}
+
+#sign-up-controls > .left-arrow {
+	left: 5px;
+}
+
+#sign-up-controls > .right-arrow {
+	right: 5px;
+}
+
+#sign-up-controls > .left-arrow,
+#sign-up-controls > .right-arrow {
+	position: absolute;
+	
+	top: 5px;
+}
+
+#sign-up-controls {
+	width: 100%;
+	
+	text-align: center;
+	
+	position: absolute;
+	
+	height: 67px;
+	
+	z-index: 2;
+}
+
+#sign-up-controls a {
+	color: white;
+}
+
+input.password {
+	
+}
+
+div.password-container {
+	margin-bottom: 15px;
+}
+
+.sign-up-img > img.notebook {
+	width: 72.7px;
+}
+
+.sign-up-img > img.person {
+	width: 55px;
+	height: 158.9px;
+	
+	top: 55%;
+}
+
+.sign-up-img > img.lock {
+	width: 68.6px;
+}
+
+.sign-up-img > img.camera {
+	width: 100px;
+}
+
+.sign-up-img > img {
+	height: 100px;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.sign-up-img {
+	display: inline-block;
+	
+	position: relative;
+	
+	width: 130px;
+	height: 130px;
+	
+	/*border: 10px solid white;*/
+	
+	border-radius: 100%;
+	
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+div#sign-up {
+	width: 100%;
+	height: 100%;
+	
+	background-color: #79c843;
+	
+	text-align: center;
+	
+	position: relative;
+	
+	display: table;
+}
+
+body#sign-up div[ui-view] > div.container,
+body#email div[ui-view] > div.container,
+body#name div[ui-view] > div.container,
+body#password div[ui-view] > div.container,
+body#phone-number div[ui-view] > div.container,
+body#profile-picture div[ui-view] > div.container,
+body#username div[ui-view] > div.container,
+body#full-name div[ui-view] > div.container,
+body#add-friends div[ui-view] > div.container,
+body#forgot-password div[ui-view] > div.container {
+	position: absolute;
+	
+	left: 50%;
+	top: 52%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	
+	text-align: center;
+	
+	/*width: 100%;*/
+	
+	/*
+	opacity: 1;
+	
+	-webkit-transition: 0.5s ease opacity;
+	transition: 0.5s ease opacity;
+}
+
+#sign-up-container.ng-hide {
+	display: block!important;
+	
+	opacity: 0;*/
+}
+
+#sign-up-container > div > div > p {
+	color: white;
+}
+
+body#profile-picture table.container {
+	width: 100%;
+	height: 100%;
+}
+
+body#profile-picture #profile-picture-container {
+	width: 70vh;
+	height: 70vh;
+	max-width: 100vw;
+	max-height: 100vw;
+	
+	margin: auto;
+	margin-top: 25px;
+	/*margin-bottom: 20px;*/
+	
+	background-color: black;
+	
+	border-radius: 100%;
+	
+	overflow: hidden;
+}
+
+body#profile-picture #profile-picture-container img#picture {
+	position: relative;
+	
+	/*left: 50%;
+	top: 50%;
+	
+	transform: translate(-50%, -50%);*/
+}
+
+body#profile-picture #button-container {
+	margin-bottom: 60px;
+	
+	text-align: center;
+}
+
+/*#sign-up-container > div > div > .button, #sign-up-container > div > div > .input-container {*/
+.sign-up.button, .sign-up.input-container {
+	margin-bottom: 15px;
+	
+	min-width: 260px;
+	max-width: 95%;
+	
+	border: none;
+}
+
+.sign-up.input-container > input {
+	text-align: center;
+}
+
+#sign-up-container > div > div > .email.input-container {
+	margin-bottom: 0;
+}
+
+#sign-up-container > div > div > .facebook.button > p {
+	position: relative;
+	
+	left: 17px;
+}
+
+#sign-up-container > div > div > .facebook.button > p::before {
+	content: " ";
+	background: url('../Shared/Images/facebook-icon-blue.png');
+	
+	position: absolute;
+	
+	left: -35px;
+	top: -2px;
+	
+	width: 30px;
+	height: 30px;
+	
+	background-size: cover;
+}
+
+#sign-up-container > div > div > .facebook.button > img {
+	width: 30px;
+	height: 30px;
+	
+	margin-right: 5px;
+}
+
+#sign-up-container > div > div > .button > p,
+#sign-up-container > div > div > .input-container > input {
+	font-size: 20px;
+	
+	max-width: 100%;
+}
+
+#sign-up-container > .error-text {
+	position: absolute;
+	
+	color: white;
+	
+	margin: 0;
+	
+	left: 0;
+	right: 0;
+}
+
+div.green-container .button {
+	width: unset;
+	
+	min-width: 125px;
+	
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+div.green-container .button {
+	font-size: 20px;
+}
+
+.mobile .photo.button {
+	/*width: 100%;
+	
+	border-radius: 0;
+	
+	border-top: 2px solid rgb(119, 119, 119);
+	
+	margin: 0;
+	
+	border: 0;
+	
+	display: block;*/
+}
+
+.mobile .photo.button:first-of-type {
+	border-top: 0px solid black;
+}

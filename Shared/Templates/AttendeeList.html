@@ -1,0 +1,4 @@
+<div class="attendee-list active">
+	<p ng-repeat="person in happening.invites" ng-class="{ going: person.status === true, 'not-going': person.status === false }"><span tr-link profile="person" ng-bind="person.username"></span></p>
+	<p ng-if="happening.invites.length == 0">No one invited!</p>
+</div>
