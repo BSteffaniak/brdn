@@ -747,6 +747,8 @@ p {
     right: -9999px;
     top: -9999px;
     bottom: -9999px;
+	
+	border-radius: 100%;
 }
 
 tbody, tr, td {
