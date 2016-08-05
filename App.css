@@ -72,117 +72,13 @@ Red #c94344 rgb(201, 67, 68)
 }
 
 @keyframes pulse {
-  from {
-    opacity: 1;
-  }
+	from {
+		opacity: 1;
+	}
 
-  to {
-    opacity: 0.3;
-  }
-}
-
-p.light-gray, span.light-gray, .light-gray {
-	color: #c0c0c0;
-}
-
-.label.light-gray {
-	border-color: #c0c0c0;
-}
-
-p.gray, span.gray, .gray {
-	color: #5a5b5a;
-}
-
-.label.gray {
-	border-color: #5a5b5a;
-}
-
-p.dark-gray, span.dark-gray, .dark-gray {
-	color: #4c4d4f;
-}
-
-.label.dark-gray {
-	border-color: #4c4d4f;
-}
-
-p.green, span.green, .green {
-	color: #79c843;
-}
-
-.label.green {
-	border-color: #79c843;
-}
-
-p.blue, span.blue, .blue {
-	color: #4491c9;
-}
-
-.label.blue {
-	border-color: #4491c9;
-}
-
-p.red, span.red, .red {
-	color: #c94344;
-}
-
-.label.red {
-	border-color: #c94344;
-}
-
-@viewport {
-	width: device-width;
-	initial-scale: .8;
-	user-scalable: no;
-}
-
-.left-arrow, .right-arrow {
-	cursor: pointer;
-	
-	width: 38.78px;
-	height: 30px;
-}
-
-.no.margin {
-	margin: 0;
-}
-
-.no.padding {
-	padding: 0;
-}
-
-.separator {
-	width: 100%;
-	
-	border-bottom: 1px solid #cdcdcd;
-	
-	margin-top: 6px;
-	margin-bottom: 6px;
-	
-	display: block;
-}
-
-.updated-dot {
-	position: absolute;
-	top: 1px;
-	right: 1px;
-	width: 10px;
-	height: 10px;
-	display: block;
-	background-color: #79c843;
-	border-radius: 100%;
-}
-
-.updated-text {
-	position: absolute;
-	
-	right: -20px;
-	top: -4px;
-	
-	font-family: 'Avenir Next Bold';
-	
-	font-size: 12px;
-	
-	color: #79c843;
+	to {
+		opacity: 0.3;
+	}
 }
 
 .left {
