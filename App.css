@@ -373,6 +373,117 @@ body.mobile {
 	bottom: 0;
 }
 
+.transition.invisible {
+	opacity: 0 !important;
+}
+
+.transition.visible {
+	opacity: 1 !important;
+}
+
+.transition.from-visible {
+	opacity: 1;
+}
+
+.transition.from-invisible {
+	opacity: 0;
+}
+
+.transition.from-left {
+    transform: translate3d(-200%, 0, 0);
+}
+
+.transition.from-right {
+    transform: translate3d(200%, 0, 0);
+}
+
+.transition.from-top {
+    transform: translate3d(0, -200%, 0);
+}
+
+.transition.from-bottom {
+    transform: translate3d(0, 200%, 0);
+}
+
+.slide.active .transition.from-left,
+.slide.active .transition.from-right,
+.slide.active .transition.from-top,
+.slide.active .transition.from-bottom {
+    transform: translate3d(0, 0, 0);
+}
+
+.transition {
+	-webkit-transition: 0.8s ease all;
+	transition: 0.8s ease all;
+	
+    -webkit-transition-property: transform, opacity;
+    transition-property: transform, opacity;
+	
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	
+	-webkit-perspective: 1000;
+	perspective: 1000;
+}
+
+.transition.delay01 {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.transition.delay02 {
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.transition.delay03 {
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+
+.transition.delay04 {
+	-webkit-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+}
+
+.transition.delay05 {
+	-webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+}
+
+.transition.delay06 {
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+
+.transition.delay07 {
+	-webkit-transition-delay: 0.7s;
+	transition-delay: 0.7s;
+}
+
+.transition.delay08 {
+	-webkit-transition-delay: 0.8s;
+	transition-delay: 0.8s;
+}
+
+.transition.delay09 {
+	-webkit-transition-delay: 0.9s;
+	transition-delay: 0.9s;
+}
+
+.transition.delay10 {
+	-webkit-transition-delay: 1s;
+	transition-delay: 1s;
+}
+
+.transition.delay11 {
+	-webkit-transition-delay: 1.1s;
+	transition-delay: 1.1s;
+}
+
 #view-table {
 	position: relative;
 	
