@@ -447,8 +447,21 @@ h6 {
 	cursor: grabbing;
 }
 
+.inline {
+	display: inline;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.inline-table {
+	display: inline-table;
+}
+
 #wolfpaq,
-#wolfpaq h1 {
+#wolfpaq h1,
+#wolfpaq h4 {
 	color: #79c843;
 }
 
