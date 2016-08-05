@@ -258,6 +258,30 @@ div.social > a {
 	margin: 0 5px;
 }
 
+h1 {
+	font-size: 28px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 23px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+h6 {
+	font-size: 12px;
+}
+
 @media (min-width: 700px) {
 	.slide {
 		padding: 0 20px;
@@ -282,6 +306,30 @@ div.social > a {
 	
 	div.social > a {
 		margin: 0 6px;
+	}
+	
+	h1 {
+		font-size: 45px;
+	}
+	
+	h2 {
+		font-size: 34px;
+	}
+	
+	h3 {
+		font-size: 28px;
+	}
+	
+	h4 {
+		font-size: 21px;
+	}
+	
+	h5 {
+		font-size: 17px;
+	}
+	
+	h6 {
+		font-size: 12px;
 	}
 }
 
@@ -310,6 +358,30 @@ div.social > a {
 	div.social > a {
 		margin: 0 8px;
 	}
+	
+	h1 {
+		font-size: 60px;
+	}
+	
+	h2 {
+		font-size: 42px;
+	}
+	
+	h3 {
+		font-size: 35px;
+	}
+	
+	h4 {
+		font-size: 25px;
+	}
+	
+	h5 {
+		font-size: 22px;
+	}
+	
+	h6 {
+		font-size: 17px;
+	}
 }
 
 @media (min-width: 1400px) {
@@ -336,6 +408,30 @@ div.social > a {
 	
 	div.social > a {
 		margin: 0 10px;
+	}
+	
+	h1 {
+		font-size: 70px;
+	}
+	
+	h2 {
+		font-size: 50px;
+	}
+	
+	h3 {
+		font-size: 40px;
+	}
+	
+	h4 {
+		font-size: 30px;
+	}
+	
+	h5 {
+		font-size: 25px;
+	}
+	
+	h6 {
+		font-size: 20px;
 	}
 }
 
@@ -405,30 +501,6 @@ html, body {
 	max-height: 100%;
 }
 
-h1 {
-	font-size: 70px;
-}
-
-h2 {
-	font-size: 50px;
-}
-
-h3 {
-	font-size: 40px;
-}
-
-h4 {
-	font-size: 30px;
-}
-
-h5 {
-	font-size: 25px;
-}
-
-h6 {
-	font-size: 20px;
-}
-
 h1, h2, h3, h4, h5, h6 {
 	color: #129490;
 	
@@ -444,7 +516,7 @@ h5.right-align,
 h6.right-align {
 	text-align: right;
 	
-	padding-right: 75px;
+	padding-right: 5%;
 }
 
 h1.left-align,
@@ -455,7 +527,7 @@ h5.left-align,
 h6.left-align {
 	text-align: left;
 	
-	padding-left: 75px;
+	padding-left: 5%;
 }
 
 ol, ul {
