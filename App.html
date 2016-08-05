@@ -91,8 +91,14 @@
 			<script>
 				getSitemap().loadControllers();
 				
+				function linkedinAuthorized() {
+					console.log("Linked in authorized");
+				}
+				
 				function linkedinLoaded() {
 					console.log("Linked in loaded");
+					
+					IN.Event.on(IN, "auth", linkedinAuthorized);
 					
 					var url = "/people/~?format=json";
 					
