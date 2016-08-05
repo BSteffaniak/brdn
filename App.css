@@ -258,29 +258,17 @@ div.social > a {
 	margin: 0 5px;
 }
 
-h1 {
-	font-size: 28px;
+h1 img {
+	height: 22px;
+	position: relative;
 }
 
-h2 {
-	font-size: 28px;
-}
-
-h3 {
-	font-size: 23px;
-}
-
-h4 {
-	font-size: 18px;
-}
-
-h5 {
-	font-size: 14px;
-}
-
-h6 {
-	font-size: 12px;
-}
+h1 { font-size: 28px; }
+h2 { font-size: 28px; }
+h3 { font-size: 23px; }
+h4 { font-size: 18px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
 
 @media (min-width: 700px) {
 	.slide {
@@ -308,29 +296,17 @@ h6 {
 		margin: 0 6px;
 	}
 	
-	h1 {
-		font-size: 45px;
+	h1 img {
+		height: 35px;
+		top: 1px;
 	}
 	
-	h2 {
-		font-size: 34px;
-	}
-	
-	h3 {
-		font-size: 28px;
-	}
-	
-	h4 {
-		font-size: 21px;
-	}
-	
-	h5 {
-		font-size: 17px;
-	}
-	
-	h6 {
-		font-size: 12px;
-	}
+	h1 { font-size: 45px; }
+	h2 { font-size: 34px; }
+	h3 { font-size: 28px; }
+	h4 { font-size: 21px; }
+	h5 { font-size: 17px; }
+	h6 { font-size: 12px; }
 }
 
 @media (min-width: 900px) {
@@ -359,29 +335,16 @@ h6 {
 		margin: 0 8px;
 	}
 	
-	h1 {
-		font-size: 60px;
+	h1 img {
+		height: 47px;
 	}
 	
-	h2 {
-		font-size: 42px;
-	}
-	
-	h3 {
-		font-size: 35px;
-	}
-	
-	h4 {
-		font-size: 25px;
-	}
-	
-	h5 {
-		font-size: 22px;
-	}
-	
-	h6 {
-		font-size: 17px;
-	}
+	h1 { font-size: 60px; }
+	h2 { font-size: 42px; }
+	h3 { font-size: 35px; }
+	h4 { font-size: 25px; }
+	h5 { font-size: 22px; }
+	h6 { font-size: 17px; }
 }
 
 @media (min-width: 1400px) {
@@ -410,29 +373,17 @@ h6 {
 		margin: 0 10px;
 	}
 	
-	h1 {
-		font-size: 70px;
+	h1 img {
+		height: 55px;
+		top: 2px;
 	}
 	
-	h2 {
-		font-size: 50px;
-	}
-	
-	h3 {
-		font-size: 40px;
-	}
-	
-	h4 {
-		font-size: 30px;
-	}
-	
-	h5 {
-		font-size: 25px;
-	}
-	
-	h6 {
-		font-size: 20px;
-	}
+	h1 { font-size: 70px; }
+	h2 { font-size: 50px; }
+	h3 { font-size: 40px; }
+	h4 { font-size: 30px; }
+	h5 { font-size: 25px; }
+	h6 { font-size: 20px; }
 }
 
 *[ng-click]:not(#content), *[ng-double-click], *[tr-link], *[tr-popup], tr-link {
