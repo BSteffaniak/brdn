@@ -1,25 +1,31 @@
 <div class="fullsize slide bgcolor1" style="text-align: center;">
     <div class="centered-vertically-relative" style="transform: translateY(-56%);">
-        <h1 id="braden" class="bold transition from-top" style="color: white; margin: 0;"><span class="accentcolor1">br</span><span class="transition from-invisible delay10 time30">a</span><span class="accentcolor1">d</span><span class="transition from-invisible delay13 time30">e</span><span class="accentcolor1">n</span></h1>
-        <div class="profile-image" style="margin: auto;"><img src="Shared/Images/me.jpg"></img></div>
+        <h1 id="braden" class="bold transition on-active from-top" style="color: white; margin: 0;"><span class="accentcolor1">br</span><span class="transition on-active from-invisible delay10 time30">a</span><span class="accentcolor1">d</span><span class="transition on-active from-invisible delay13 time30">e</span><span class="accentcolor1">n</span></h1>
+        <div class="profile-image transition on-active from-small" style="margin: auto; background-color: white;"><img src="Shared/Images/me.jpg"></img></div>
         <div class="social">
-            <a target="_blank" href="https://github.com/BSteffaniak"><img src="Shared/Images/github.svg"></img></a>
-            <a target="_blank" href="https://linkedin.com/in/bradensteffaniak"><img src="Shared/Images/linkedin.svg"></img></a>
-            <a target="_blank" href="http://stackoverflow.com/users/1305997/braden-steffaniak"><img src="Shared/Images/overflow.svg"></img></a>
-            <a href="mailto:BradenSteffaniak@gmail.com"><img src="Shared/Images/gmail.svg"></img></a>
+            <a class="inline-block transition on-active from-small delay04 time05" target="_blank" href="https://github.com/BSteffaniak"><img src="Shared/Images/github.svg"></img></a>
+            <a class="inline-block transition on-active from-small delay06 time05" target="_blank" href="https://linkedin.com/in/bradensteffaniak"><img src="Shared/Images/linkedin.svg"></img></a>
+            <a class="inline-block transition on-active from-small delay08 time05" target="_blank" href="http://stackoverflow.com/users/1305997/braden-steffaniak"><img src="Shared/Images/overflow.svg"></img></a>
+            <a class="inline-block transition on-active from-small delay10 time05" href="mailto:BradenSteffaniak@gmail.com"><img src="Shared/Images/gmail.svg"></img></a>
         </div>
     </div>
     <h2 class="next-slide" id="next"><a href="#" class="faintfg1">What I've done</a></h2>
 </div>
 <div class="slide bgcolor4">
-    <h1>Software Engineer at Boeing</h1>
-    <h4 class="date">April 2015 - Present</h4>
+    <h1 class="transition from-left">Software Engineer at Boeing</h1>
+    <div class="date">
+        <h4 class="transition from-right">April 2015 - Present</h4>
+    </div>
     <p>I develop web pages and web applications in a team of developers using ASP.NET web forms on the server-side with AngularJS, D3.js, Bootstrap, and jQuery on the front-end. Many of the web pages require pulling and analyzing information from multiple different databases and organizing the data on the web page using an array of charting libraries I developed in-house using D3.js as the backbone. The code was managed on multiple git repositories.</p>
     <p>I migrated the old ASP.NET web form architecture to the new ASP.NET MVC Razor architecture that improved the page load times by allowing the data on the pages to be received on demand through AJAX calls only when necessary.</p>
 </div>
 <div class="slide bgcolor2">
-    <h1 class="right-align"><a target="_blank" href="https://github.com/BSteffaniak/Nova"><img src="Shared/Images/github.svg"></img></a>Nova</h1>
-    <h4 class="right-align date">January 2014 - Present</h4>
+    <h1 class="right-align transition from-right"><a class="inline-block transition from-small delay07 time05" target="_blank" href="https://github.com/BSteffaniak/Nova"><img src="Shared/Images/github.svg"></img></a>Nova</h1>
+    <div class="date">
+        <h4 class="right-align transition from-left">January 2014 - Present</h4>
+    </div>
+    
+    <!-- pre tag contents have to be tabbed like this so the whitespace works right -->
     <pre style='color:#000000; float: left;' class="bgcolorwhite"><span style='color:#800000; font-weight:bold; '>public</span> <span style='color:#800000; font-weight:bold; '>class</span> HelloWorld
 <span style='color:#800080; '>{</span>
     <span style='color:#808030; '>[</span>EntryPoint<span style='color:#808030; '>]</span>
@@ -62,10 +68,10 @@
     </div>
 </div>
 <div class="slide bgcolor3">
-    <h1 class="inline-table"><a target="_blank" href="https://github.com/BSteffaniak/TheDiggingGame"><img src="Shared/Images/github.svg"></img></a></h1>
+    <h1 class="inline-table transition from-left"><a class="inline-block transition from-small delay07 time05" target="_blank" href="https://github.com/BSteffaniak/TheDiggingGame"><img src="Shared/Images/github.svg"></img></a></h1>
     <div class="inline-table">
-        <h1>The Digging Game</h1>
-        <h4 class="date">May 2012 - Jun 2013</h4>
+        <h1 class="transition from-left">The Digging Game</h1>
+        <h4 class="date transition from-right">May 2012 - Jun 2013</h4>
     </div>
     <table class="gallery">
         <tr>
@@ -73,14 +79,14 @@
                 <p style="text-align: right; margin-left: auto;">The Digging Game is my most recent attempt at making a video game. There have been many iterations of the game ranging from when I was just learning GUI development. The game started off built with the Java Swing framework. The game is currently built in Java with OpenGL used to render the graphics.</p>
             </td>
             <td>
-                <img src="Shared/Images/tdg1.jpg" class="showcase-image"></img>
+                <img src="Shared/Images/tdg1.jpg" class="showcase-image transition from-small"></img>
             </td>
         </tr>
     </table>
     <table class="gallery" style="margin: -8vw 0 -3vw 0;">
         <tr>
             <td>
-                <img src="Shared/Images/tdg2.jpg" class="showcase-image"></img>
+                <img src="Shared/Images/tdg2.jpg" class="showcase-image transition from-small delay03"></img>
             </td>
             <td style="width: 99%">
                 <p>The game's terrain generation was infinite in all (2 dimensional) directions.</p>
@@ -93,46 +99,50 @@
                 <p style="text-align: right; margin-left: auto;">The game has a functioning day/night cycle. During the day the environment is much more visible than during the night (unless a light source, such as a torch, is present). There is a aesthetically appealing transition from day to night (and vice versa) where pretty colors like pink can be seen.</p>
             </td>
             <td>
-                <img src="Shared/Images/tdg3.jpg" class="showcase-image"></img>
+                <img src="Shared/Images/tdg3.jpg" class="showcase-image transition from-small delay06"></img>
             </td>
         </tr>
     </table>
 </div>
 <div class="slide bgcolor4">
-    <h1 class="right-align"><a target="_blank" href="https://github.com/BSteffaniak/ZombieHunt"><img src="Shared/Images/github.svg"></img></a>Zombie Hunt</h1>
-    <h4 class="right-align date">Nov 2012 - Aug 2013</h4>
-    <img src="Shared/Images/zombies.jpg" class="showcase-image" style="float: left;"></img>
+    <h1 class="right-align transition from-right"><a class="inline-block transition from-small delay07 time05" target="_blank" href="https://github.com/BSteffaniak/ZombieHunt"><img src="Shared/Images/github.svg"></img></a>Zombie Hunt</h1>
+    <div class="date">
+        <h4 class="right-align transition from-left">Nov 2012 - Aug 2013</h4>
+    </div>
+    <img src="Shared/Images/zombies.jpg" class="showcase-image transition from-small" style="float: left;"></img>
     <p style="display: inline-block;" class="restricted-width">Zombie Hunt is another video game that I made with Java and OpenGL. It's a typical zombie survival game without any real objective besides killing as many zombies as possible. I modelled the map after my parent's neighborhood from google maps.</p>
 </div>
 <div id="wolfpaq" class="slide" style="background-image: url('Shared/Images/wolfpaq-bg.jpg'); background-size: cover;">
-    <h1 class="inline-table"><a target="_blank" href="http://wolfpaq.co"><img src="Shared/Images/link.svg"></img></a></h1>
+    <h1 class="inline-table transition from-left"><a class="inline-block transition from-small delay07 time05" target="_blank" href="http://wolfpaq.co"><img src="Shared/Images/link.svg"></img></a></h1>
     <div class="inline-table">
-        <h1>Wolfpaq</h1>
-        <h4 class="date">Sept 2014 - Present</h4>
+        <h1 class="transition from-left">Wolfpaq</h1>
+        <h4 class="date transition from-right">Sept 2014 - Present</h4>
     </div>
     <table>
         <tr>
-            <td><img class="showcase-image" src="Shared/Images/feed1.svg"></img></td>
+            <td><img class="showcase-image transition from-bottom" src="Shared/Images/feed1.svg"></img></td>
             <td>
                 <p style="margin-bottom: 100px;"><span class="restricted-width">Wolfpaq is a social app startup that I co-founded. The idea (best explained on <a target="_blank" href="http://wolfpaq.co">the site</a>) in summary is that it is a casual get together app. The feed to the left shows what is going on in your "wolfpaqs".</span></p>
                 <p style="text-align: right;"><span class="restricted-width">The app uses a REST server to receive and update data. The REST server was built with Java Spring Boot.</span></p>
                 <p style="text-align: right;"><span class="restricted-width">I also developed <a target="_blank" href="http://wolfpaq.co">the wolfpaq website</a>.</span></p>
             </td>
-            <td><img class="showcase-image" src="Shared/Images/wolfpaq.svg"></img></td>
+            <td><img class="showcase-image transition from-top" src="Shared/Images/wolfpaq.svg"></img></td>
         </tr>
     </table>
 </div>
 <div class="slide bgcolor1">
-    <h1 class="right-align"><a target="_blank" href="https://github.com/BSteffaniak/brdn"><img src="Shared/Images/github.svg"></img></a>This website</h1>
-    <h4 class="right-align date">Aug 2016 - Present</h4>
+    <h1 class="right-align transition from-right"><a class="inline-block transition from-small delay07 time05" target="_blank" href="https://github.com/BSteffaniak/brdn"><img src="Shared/Images/github.svg"></img></a>This website</h1>
+    <div class="date">
+        <h4 class="right-align transition from-left">Aug 2016 - Present</h4>
+    </div>
     <p>My web design skills are showcased through this website. Keep in mind that I am much more comfortable with the server-side aspects. The full code for this website can be seen from the <a target="_blank" href="https://github.com/BSteffaniak/brdn">GitHub repository</a>. Feel free to browse the code, notify me of any issues, fork it (if you want to do something with it??), and share it with those who might be interested.</p>
 </div>
 <div class="slide bgcolor3">
-    <h1>Connect with me</h1>
+    <h1>Connect with me<span class="transition from-visible delay10 accentcolor1">!!!</span></h1>
     <table class="connect">
         <tr>
             <td>
-                <a target="_blank" href="https://github.com/BSteffaniak"><img src="Shared/Images/github.svg"></img></a>
+                <a class="inline-block transition from-small time05 delay02" target="_blank" href="https://github.com/BSteffaniak"><img src="Shared/Images/github.svg"></img></a>
             </td>
             <td>
                 Follow <a target="_blank" href="https://github.com/BSteffaniak">me on GitHub</a>, browse my repositories and contributions.
@@ -140,7 +150,7 @@
         </tr>
         <tr>
             <td>
-                <a target="_blank" href="https://linkedin.com/in/bradensteffaniak"><img src="Shared/Images/linkedin.svg"></img></a>
+                <a class="inline-block transition from-small time05 delay04" target="_blank" href="https://linkedin.com/in/bradensteffaniak"><img src="Shared/Images/linkedin.svg"></img></a>
             </td>
             <td>
                 Connect with <a target="_blank" href="https://linkedin.com/in/bradensteffaniak">me on LinkedIn</a> and/or send me messages.
@@ -148,7 +158,7 @@
         </tr>
         <tr>
             <td>
-                <a target="_blank" href="http://stackoverflow.com/users/1305997/braden-steffaniak"><img src="Shared/Images/overflow.svg"></img></a>
+                <a class="inline-block transition from-small time05 delay06" target="_blank" href="http://stackoverflow.com/users/1305997/braden-steffaniak"><img src="Shared/Images/overflow.svg"></img></a>
             </td>
             <td>
                 View <a target="_blank" href="http://stackoverflow.com/users/1305997/braden-steffaniak">my profile</a>, see the silly questions I have had and answers I have given over the years.
@@ -156,7 +166,7 @@
         </tr>
         <tr>
             <td>
-                <a href="mailto:BradenSteffaniak@gmail.com"><img src="Shared/Images/gmail.svg"></img></a>
+                <a class="inline-block transition from-small time05 delay08" href="mailto:BradenSteffaniak@gmail.com"><img src="Shared/Images/gmail.svg"></img></a>
             </td>
             <td>
                 Email me at <a href="mailto:BradenSteffaniak@gmail.com">BradenSteffaniak@gmail.com</a>. (I'll read it)

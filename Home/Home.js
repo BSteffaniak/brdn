@@ -11,9 +11,14 @@ app.controller('Home', [ '$scope', function($scope) {
 	
 	function refreshSlides() {
 		for (var i = 0; i < slides.length; i++) {
-			var distance = Math.abs(view.node().scrollTop - slides[i].offsetTop);
+			var y = slides[i].offsetTop;
+			var height = slides[i].offsetHeight;
+			var scroll = view.node().scrollTop;
+			var scrollBottom = scroll + $(window).height();
+			var distance = Math.abs(scroll - y);
 			
 			d3.select(slides[i]).classed("active", distance < 100);
+			d3.select(slides[i]).classed("visible", y < scrollBottom && y + height > scroll);
 		}
 	}
 	
