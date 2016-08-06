@@ -227,12 +227,25 @@ h1 img {
 	position: relative;
 }
 
+p, ul, ol { font-size: 10px; }
+
 h1 { font-size: 28px; }
 h2 { font-size: 28px; }
 h3 { font-size: 23px; }
 h4 { font-size: 18px; }
 h5 { font-size: 14px; }
 h6 { font-size: 12px; }
+
+
+@media (max-width: 699px) {
+	#tdg table:first-of-type p {
+		margin-top: -25px;
+	}
+	
+	#tdg {
+		padding-bottom: 40px;
+	}
+}
 
 @media (min-width: 700px) {
 	.slide {
@@ -264,6 +277,8 @@ h6 { font-size: 12px; }
 		height: 35px;
 		top: 1px;
 	}
+	
+	p, ul, ol { font-size: 12px; }
 	
 	h1 { font-size: 45px; }
 	h2 { font-size: 34px; }
@@ -302,6 +317,8 @@ h6 { font-size: 12px; }
 	h1 img {
 		height: 47px;
 	}
+	
+	p, ul, ol { font-size: 15px; }
 	
 	h1 { font-size: 60px; }
 	h2 { font-size: 42px; }
@@ -347,6 +364,8 @@ h6 { font-size: 12px; }
 		height: 55px;
 		top: 2px;
 	}
+	
+	p, ul, ol { font-size: 18px; }
 	
 	h1 { font-size: 70px; }
 	h2 { font-size: 50px; }
@@ -534,8 +553,6 @@ h6.left-align {
 
 ol, ul {
 	overflow: hidden;
-	
-	font-size: 18px;
 }
 
 body.mobile {
@@ -1084,7 +1101,6 @@ p.error {
 }
 
 p {
-	font-size: 18px;
 	line-height: 1.5;
 }
 
