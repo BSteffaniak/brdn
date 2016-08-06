@@ -268,6 +268,11 @@ h6 { font-size: 12px; }
 	background-repeat: no-repeat;
 }
 
+#boeing h1,
+#boeing h4 {
+	color: white;
+}
+
 #boeing p {
 	position: relative;
 }
