@@ -319,7 +319,7 @@ h6 { font-size: 12px; }
 
 #wolfpaq {
 	background-image: url('Shared/Images/wolfpaq-bg.jpg');
-	background-size: 125%;
+	background-size: 250vh;
 	background-position: center;
 }
 
