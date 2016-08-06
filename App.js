@@ -6,7 +6,7 @@ var iphoneCallbacks = {};
 var iphoneContext = {};
 var iphoneCallbackID = 0;
 
-app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http', '$rootScope', '$scope', '$state', '$stateParams', '$templateCache', '$localStorage', '$loginUtils', '$analytics', '$server', '$utils', '$mql', function($timeout, $window, $interpolate, $filter, $http, $rootScope, $scope, $state, $stateParams, $templateCache, $localStorage, $loginUtils, $analytics, $server, $utils, $mql) {
+app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http', '$rootScope', '$scope', '$state', '$stateParams', '$templateCache', '$localStorage', '$loginUtils', '$analytics', '$server', '$utils', '$mql', '$location', '$anchorScroll', function($timeout, $window, $interpolate, $filter, $http, $rootScope, $scope, $state, $stateParams, $templateCache, $localStorage, $loginUtils, $analytics, $server, $utils, $mql, $location, $anchorScroll) {
 	//$scope.testing = "Happenings/Happenings.html";
 	//$scope.testing = "ViewHappening/ViewHappening.html";//"ViewWolfpaq/ViewWolfpaq.html";
 	//$scope.testingParameters = { id: 1 };
@@ -497,11 +497,52 @@ app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http
 	});
 	
 	$scope.$on("$stateContentLoaded", function () {
-		
 	});
 	
 	$scope.$on("$viewContentLoaded", function (event) {
 		updateHeaderPolarization();
+		
+		var slides = d3.selectAll(".slide")[0];
+		
+		var view = d3.select("div.view");
+		
+		function refreshSlides() {
+			for (var i = 0; i < slides.length; i++) {
+				var y = slides[i].offsetTop;
+				var height = slides[i].offsetHeight;
+				var scroll = view.node().scrollTop;
+				var scrollBottom = scroll + $(window).height();
+				var distance = Math.abs(scroll - y);
+				
+				d3.select(slides[i]).classed("active", distance < 100);
+				d3.select(slides[i]).classed("visible", y < scrollBottom && y + height > scroll);
+			}
+		}
+		
+		view.on("scroll", refreshSlides);
+		
+		refreshSlides();
+		
+		/*var searchIndex = window.location.hash.indexOf("?");
+		
+		if (searchIndex > 0) {
+			var hash = window.location.hash.substring(searchIndex + 1);
+			
+			var params = hash.split("&").map(function (d) {
+				return d.split("=");
+			});
+			console.log(params)
+			if (params.length > 0) {
+				var first = params[0];
+				
+				if (first.length == 1) {
+					//$location.hash(first[0])
+					console.log(first[0])
+					//$anchorScroll();
+				}
+			}
+			console.log(params);
+		}*/
 	});
 	
 	$scope.$on('$stateChangeSuccess', function(next, current) {
