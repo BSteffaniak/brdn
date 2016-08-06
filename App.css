@@ -258,6 +258,98 @@ h6 { font-size: 12px; }
 	background-repeat: no-repeat;
 }
 
+#tdg td {
+	position: relative;
+}
+
+/*#tdg td:first-of-type p {
+	right: 0;
+}*/
+
+#tdg p,
+#zombie-hunt p {
+	background-color: rgba(0, 0, 0, 0.5);
+	
+	padding: 10px;
+	
+	border-radius: 6px;
+	
+	/*position: absolute;
+	top: 50%;
+	transform: translateY(-50%);*/
+}
+
+#tdg .showcase-image,
+#zombie-hunt .showcase-image {
+	border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.cloud {
+	position: absolute;
+	
+	background-color: white;
+}
+
+#zombie-hunt p {
+	position: relative;
+}
+
+#zombie-hunt h1,
+#zombie-hunt h4 {
+	position: relative;
+}
+
+#zombie-hunt h1 .shadow-text,
+#zombie-hunt h4 .shadow-text {
+	right: 0;
+}
+
+#zombie-hunt .fullsize-background {
+	animation-duration: 15s;
+	animation-name: fade-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#zombie-hunt .fullsize-background:nth-of-type(5) { animation-delay: 0s; }
+#zombie-hunt .fullsize-background:nth-of-type(4) { animation-delay: 3s; }
+#zombie-hunt .fullsize-background:nth-of-type(3) { animation-delay: 6s; }
+#zombie-hunt .fullsize-background:nth-of-type(2) { animation-delay: 9s; }
+#zombie-hunt .fullsize-background:nth-of-type(1) { animation-delay: 12s; }
+
+#wolfpaq {
+	background-image: url('Shared/Images/wolfpaq-bg.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+#wolfpaq,
+#wolfpaq h1,
+#wolfpaq h4 {
+	color: #79c843;
+}
+
+#wolfpaq a {
+	color: white;
+}
+
+#wolfpaq table {
+	width: 100%;
+}
+
+#wolfpaq table img {
+	width: 25vw;
+	max-width: 300px;
+}
+
+#wolfpaq table td:nth-child(1),
+#wolfpaq table td:nth-child(3) {
+	width: 1%;
+}
+
+#wolfpaq table td:nth-child(2) {
+	width: 99%;
+}
 
 @media (max-width: 699px) {
 	#tdg table:first-of-type p {
@@ -462,93 +554,6 @@ h6 { font-size: 12px; }
 
 .fullsize-background.centered {
 	background-position: 50% 50%;
-}
-
-#tdg td {
-	position: relative;
-}
-
-/*#tdg td:first-of-type p {
-	right: 0;
-}*/
-
-#tdg p,
-#zombie-hunt p {
-	background-color: rgba(0, 0, 0, 0.5);
-	
-	padding: 10px;
-	
-	border-radius: 6px;
-	
-	/*position: absolute;
-	top: 50%;
-	transform: translateY(-50%);*/
-}
-
-#tdg .showcase-image,
-#zombie-hunt .showcase-image {
-	border: 2px solid rgba(0, 0, 0, 0.5);
-}
-
-.cloud {
-	position: absolute;
-	
-	background-color: white;
-}
-
-#zombie-hunt p {
-	position: relative;
-}
-
-#zombie-hunt h1,
-#zombie-hunt h4 {
-	position: relative;
-}
-
-#zombie-hunt h1 .shadow-text,
-#zombie-hunt h4 .shadow-text {
-	right: 0;
-}
-
-#zombie-hunt .fullsize-background {
-	animation-duration: 15s;
-	animation-name: fade-out;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-
-#zombie-hunt .fullsize-background:nth-of-type(5) { animation-delay: 0s; }
-#zombie-hunt .fullsize-background:nth-of-type(4) { animation-delay: 3s; }
-#zombie-hunt .fullsize-background:nth-of-type(3) { animation-delay: 6s; }
-#zombie-hunt .fullsize-background:nth-of-type(2) { animation-delay: 9s; }
-#zombie-hunt .fullsize-background:nth-of-type(1) { animation-delay: 12s; }
-
-#wolfpaq,
-#wolfpaq h1,
-#wolfpaq h4 {
-	color: #79c843;
-}
-
-#wolfpaq a {
-	color: white;
-}
-
-#wolfpaq table {
-	width: 100%;
-}
-
-#wolfpaq table img {
-	width: 25vw;
-	max-width: 300px;
-}
-
-#wolfpaq table td:nth-child(1),
-#wolfpaq table td:nth-child(3) {
-	width: 1%;
-}
-
-#wolfpaq table td:nth-child(2) {
-	width: 99%;
 }
 
 .gallery {
