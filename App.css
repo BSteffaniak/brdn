@@ -248,14 +248,18 @@ h4 { font-size: 18px; }
 h5 { font-size: 14px; }
 h6 { font-size: 12px; }
 
+#profile,
+#profile .fullsize-background {
+	background-size: 250%;
+	background-repeat: no-repeat;
+}
+
 #profile {
 	text-align: center;
 	
 	background-color: #3765bb;
 	background-image: url('Shared/Images/clouds.jpg');
 	background-position: 50% 100%;
-	background-size: 200%;
-	background-repeat: no-repeat;
 }
 
 #tdg td {
@@ -436,6 +440,8 @@ h6 { font-size: 12px; }
 	h4 { font-size: 25px; }
 	h5 { font-size: 22px; }
 	h6 { font-size: 17px; }
+	
+	#profile, #profile .fullsize-background { background-size: 200%; }
 }
 
 @media (min-width: 1100px) {
@@ -443,7 +449,7 @@ h6 { font-size: 12px; }
 		padding: 0 100px;
 	}
 	
-	#profile { background-size: 100%; }
+	#profile, #profile .fullsize-background { background-size: 100%; }
 }
 
 @media (min-width: 1400px) {
