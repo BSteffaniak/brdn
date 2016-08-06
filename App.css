@@ -241,10 +241,6 @@ h6 { font-size: 12px; }
 	#tdg table:first-of-type p {
 		margin-top: -25px;
 	}
-	
-	#tdg {
-		padding-bottom: 40px;
-	}
 }
 
 @media (min-width: 700px) {
