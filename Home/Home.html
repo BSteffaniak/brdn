@@ -1,4 +1,4 @@
-<div id="profile" class="fullsize slide" ng-style="{ 'background-position': '50% ' + (100 + scroll.top / 16) + '%' }">
+<div id="profile" class="fullsize slide" ng-style="{ 'background-position': '50% ' + (!mobile ? (100 + scroll.top / 16) : '100%') + '%' }">
     <div class="fullsize-background" style="background-image: url('Shared/Images/space.png'); background-position: 50% 0;"></div>
     <div class="centered-vertically-relative" style="transform: translateY(-56%);">
         <h1 id="braden" class="bold transition on-active from-top" style="color: white; margin: 0;"><span class="accentcolor1">br</span><span class="transition on-active from-invisible delay10 time30">a</span><span class="accentcolor1">d</span><span class="transition on-active from-invisible delay13 time30">e</span><span class="accentcolor1">n</span></h1>
@@ -123,7 +123,7 @@
     <p style="display: inline-block;" class="restricted-width">The gif shows how the bullets stop when coming into contact with any obsticles.</p>
     <p style="display: inline-block;" class="restricted-width">Fun fact: I modelled the map after my parent's neighborhood from google maps.</p>
 </div>
-<div id="wolfpaq" class="slide" ng-style="{ 'background-position': '50% ' + (-slides.wolfpaq.screenY / 2.5) + 'px' }">
+<div id="wolfpaq" class="slide" ng-style="{ 'background-position': '50% ' + (!mobile ? (-slides.wolfpaq.screenY / 2.5) + 'px' : '50%') }">
     <h1 class="inline-table transition from-left"><a class="inline-block transition from-small delay07 time05" target="_blank" href="http://wolfpaq.co"><img src="Shared/Images/link.svg"></img></a></h1>
     <div class="inline-table">
         <h1 class="transition from-left">Wolfpaq</h1>
