@@ -579,4 +579,6 @@ app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http
 	$scope.formatDate = function (input, format) {
 		return formatDate(input, format);
 	};
+	
+	$scope.max = Math.max;
 }]);
