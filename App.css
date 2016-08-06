@@ -262,6 +262,25 @@ h6 { font-size: 12px; }
 	background-position: 50% 100%;
 }
 
+#boeing {
+	background-image: url('Shared/Images/cloudsbg.jpg');
+	background-size: 200%;
+	background-repeat: no-repeat;
+}
+
+#boeing p {
+	position: relative;
+}
+
+#plane {
+	height: 145px;
+	
+	position: absolute;
+	
+	top: 18px;
+	right: 10px;
+}
+
 #tdg td {
 	position: relative;
 }
@@ -270,6 +289,7 @@ h6 { font-size: 12px; }
 	right: 0;
 }*/
 
+#boeing p,
 #tdg p,
 #zombie-hunt p {
 	background-color: rgba(0, 0, 0, 0.5);
@@ -277,6 +297,8 @@ h6 { font-size: 12px; }
 	padding: 10px;
 	
 	border-radius: 6px;
+	
+	color: white;
 	
 	/*position: absolute;
 	top: 50%;
@@ -450,6 +472,8 @@ h6 { font-size: 12px; }
 	}
 	
 	#profile, #profile .fullsize-background { background-size: 100%; }
+	
+	#plane { right: 250px; }
 }
 
 @media (min-width: 1400px) {
