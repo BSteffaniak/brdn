@@ -248,6 +248,16 @@ h4 { font-size: 18px; }
 h5 { font-size: 14px; }
 h6 { font-size: 12px; }
 
+#profile {
+	text-align: center;
+	
+	background-color: #3765bb;
+	background-image: url('Shared/Images/clouds.jpg');
+	background-position: 50% 100%;
+	background-size: 200%;
+	background-repeat: no-repeat;
+}
+
 
 @media (max-width: 699px) {
 	#tdg table:first-of-type p {
@@ -340,6 +350,8 @@ h6 { font-size: 12px; }
 	.slide.space-hog-md {
 		padding: 0 100px;
 	}
+	
+	#profile { background-size: 100%; }
 }
 
 @media (min-width: 1400px) {
@@ -450,16 +462,6 @@ h6 { font-size: 12px; }
 
 .fullsize-background.centered {
 	background-position: 50% 50%;
-}
-
-#profile {
-	text-align: center;
-	
-	background-color: #3765bb;
-	background-image: url('Shared/Images/clouds.jpg');
-	background-position: 50% 100%;
-	background-size: 100%;
-	background-repeat: no-repeat;
 }
 
 #tdg td {
