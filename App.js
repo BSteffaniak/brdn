@@ -28,6 +28,7 @@ app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http
 	$scope.session = $localStorage;
 	
 	$scope.mobileStyle = $utils.isMobile;
+	$scope.mobile = $utils.isMobile;
 	
 	$scope.sitemap = getSitemap();
 	
