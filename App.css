@@ -423,7 +423,7 @@ h6 { font-size: 12px; }
 
 .tdg-background {
 	background-size: cover;
-	background-position-x: center;
+	background-position: 50% 0px;
 	
 	position: absolute;
 	
