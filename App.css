@@ -452,6 +452,16 @@ h6 { font-size: 12px; }
 	background-position: 50% 50%;
 }
 
+#profile {
+	text-align: center;
+	
+	background-color: #3765bb;
+	background-image: url('Shared/Images/clouds.jpg');
+	background-position: 50% 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
 #tdg td {
 	position: relative;
 }
@@ -1158,7 +1168,7 @@ p {
 	border-radius: 100%;
 	overflow: hidden;
 	
-	border: 4px solid #f0f0f0;
+	border: 4px solid #d0d0d0;
 	
 	position: relative;
 }
