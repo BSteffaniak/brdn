@@ -83,6 +83,66 @@ Red #c94344 rgb(201, 67, 68)
 	}
 }
 
+@keyframes day-night-cycle {
+	0% {
+		background-color: #50a2d8;
+	}
+
+	25% {
+		background-color: #8788a1;
+	}
+
+	35% {
+		background-color: #d16252;
+	}
+	
+	60% {
+		background-color: #000000;
+	}
+	
+	85% {
+		background-color: #e3786e;
+	}
+	
+	100% {
+		background-color: #50a2d8;
+	}
+}
+
+@keyframes tdg-shadows {
+	0% {
+		opacity: 0.3;
+	}
+	
+	10% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 0;
+	}
+
+	35% {
+		opacity: 0.5;
+	}
+	
+	50% {
+		opacity: 1;
+	}
+	
+	70% {
+		opacity: 1;
+	}
+	
+	85% {
+		opacity: 0.5;
+	}
+	
+	100% {
+		opacity: 0.3;
+	}
+}
+
 @keyframes size-bulge {
 	0% {
 		transform: scale(0);
@@ -130,6 +190,10 @@ Red #c94344 rgb(201, 67, 68)
 }
 
 .slide {
+	padding: 0 10px;
+}
+
+.slide.space-hog {
 	padding: 0 10px;
 }
 
@@ -247,6 +311,12 @@ h6 { font-size: 12px; }
 	h6 { font-size: 17px; }
 }
 
+@media (min-width: 1100px) {
+	.slide.space-hog-md {
+		padding: 0 100px;
+	}
+}
+
 @media (min-width: 1400px) {
 	.slide {
 		padding: 0 200px;
@@ -296,6 +366,86 @@ h6 { font-size: 12px; }
 
 .inline-table {
 	display: inline-table;
+}
+
+.shadow-text {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	color: black;
+	white-space: nowrap;
+	z-index: -1;
+	
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none;   /* Chrome/Safari/Opera */
+	-khtml-user-select: none;    /* Konqueror */
+	-moz-user-select: none;      /* Firefox */
+	-ms-user-select: none;       /* Internet Explorer/Edge */
+	user-select: none;   
+}
+
+#tdg,
+#tdg h1,
+#tdg h4 {
+	color: white;
+}
+
+#tdg, .tdg-background.shadows {
+	animation-duration: 15s;
+	animation-iteration-count: infinite;
+	
+	-webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
+}
+
+#tdg {
+	animation-name: day-night-cycle;
+}
+
+.tdg-background.shadows {
+	animation-name: tdg-shadows;
+}
+
+.tdg-background {
+	background-size: cover;
+	background-position-x: center;
+	
+	position: absolute;
+	
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+#tdg td {
+	position: relative;
+}
+
+#tdg td:first-of-type p {
+	right: 0;
+}
+
+#tdg p {
+	background-color: rgba(0, 0, 0, 0.5);
+	
+	padding: 10px;
+	
+	border-radius: 6px;
+	
+	position: absolute;;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#tdg .showcase-image {
+	border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.cloud {
+	position: absolute;
+	
+	background-color: white;
 }
 
 #wolfpaq,
@@ -848,6 +998,8 @@ td.page-section.active > p {
 	overflow: hidden;
 	
 	padding-bottom: 20px;
+	
+	position: relative;
 }
 
 div.fullsize {
