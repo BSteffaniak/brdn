@@ -504,6 +504,8 @@ app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http
 		bottom: 0
 	};
 	
+	$scope.slides = {};
+	
 	$scope.$on("$viewContentLoaded", function (event) {
 		updateHeaderPolarization();
 		
@@ -518,10 +520,6 @@ app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http
 			$scope.scroll.top = scroll;
 			$scope.scroll.bottom = scrollBottom;
 			
-			if (apply !== false) {
-				$scope.$apply();
-			}
-			
 			for (var i = 0; i < slides.length; i++) {
 				var y = slides[i].offsetTop;
 				var height = slides[i].offsetHeight;
@@ -529,6 +527,15 @@ app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http
 				
 				d3.select(slides[i]).classed("active", distance < 100);
 				d3.select(slides[i]).classed("visible", y < scrollBottom && y + height > scroll);
+				
+				$scope.slides[slides[i].id] = $scope.slides[slides[i].id] || {};
+				
+				var slide = $scope.slides[slides[i].id];
+				slide.screenY = y - scroll;
+			}
+			
+			if (apply !== false) {
+				$scope.$apply();
 			}
 		}
 		
