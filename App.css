@@ -104,7 +104,11 @@ Red #c94344 rgb(201, 67, 68)
 		background-color: #d16252;
 	}
 	
-	60% {
+	50% {
+		background-color: #000000;
+	}
+	
+	70% {
 		background-color: #000000;
 	}
 	
@@ -417,7 +421,7 @@ h6 { font-size: 12px; }
 }
 
 #tdg, .fullsize-background.shadows {
-	animation-duration: 15s;
+	animation-duration: 25s;
 	animation-iteration-count: infinite;
 	
 	-webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
