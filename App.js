@@ -527,16 +527,13 @@ app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http
 				var distance = Math.abs(scroll - y);
 				
 				d3.select(slides[i]).classed("active", distance < 100);
-				d3.select(slides[i]).classed("visible", y < scrollBottom && y + height > scroll);
+				d3.select(slides[i]).classed("visible", y + $(window).height() / 3 < scrollBottom && y + height > scroll);
 				
 				if (slides[i].id) {
 					$scope.slides[slides[i].id] = $scope.slides[slides[i].id] || {};
 					
 					var slide = $scope.slides[slides[i].id];
 					slide.screenY = y - scroll;
-					
-					if (slides[i].id=="boeing")
-					console.log(slides[i].id, slide.screenY);
 				}
 			}
 			
