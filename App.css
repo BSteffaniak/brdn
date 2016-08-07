@@ -1120,7 +1120,7 @@ td.page-section.active > p {
 	
 	position: relative;
 	
-	min-height: 100%;
+	/*min-height: 100%;*/
 }
 
 div.fullsize {
