@@ -1119,6 +1119,8 @@ td.page-section.active > p {
 	padding-bottom: 20px;
 	
 	position: relative;
+	
+	min-height: 100%;
 }
 
 div.fullsize {
