@@ -1170,6 +1170,17 @@ body.web .adaptive-width {
 	margin: 0 auto;
 }
 
+.fixed-full {
+	position: fixed;
+	left: -1px;
+	right: -1px;
+	top: -1px;
+	bottom: -1px;
+	
+	width: calc(100vw + 2px);
+	height: calc(100vh + 2px);
+}
+
 .fixed-center {
 	position: fixed;
 	left: 50%;
