@@ -31,7 +31,9 @@ app.directive('lazy', function() {
 	    restrict: 'A',
 		scope: false,
 		link: function(scope, elements, attr) {
-			elements[0].innerHTML += "<span class='shadow-text'>" + elements[0].innerHTML + "</span>";
+			var offset = Math.ceil(elements[0].offsetHeight / 26);
+			
+			elements[0].innerHTML += "<span class='shadow-text' style='transform: translate3d(" + offset + "px, " + offset + "px, 0);'>" + elements[0].innerHTML + "</span>";
 		}
 	};
 }).directive('onEnter', function() {
