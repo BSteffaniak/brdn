@@ -1,24 +1,27 @@
-<div id="profile" class="fullsize slide" ng-style="{ 'background-position': '50% ' + (!mobile ? (100 + scroll.top / 16) : '100%') + '%' }">
-    <div class="fullsize-background" style="background-image: url('Shared/Images/space.png'); background-position: 50% 0;"></div>
-    <div class="centered-vertically-relative" style="transform: translateY(-56%);">
-        <h1 id="braden" class="bold transition on-active from-top" style="color: white; margin: 0;"><span class="accentcolor1">br</span><span class="transition on-active from-invisible delay10 time30">a</span><span class="accentcolor1">d</span><span class="transition on-active from-invisible delay13 time30">e</span><span class="accentcolor1">n</span></h1>
-        <div class="profile-image transition on-active from-small" style="margin: auto; background-color: white;"><img src="Shared/Images/me-small.jpg"></img></div>
-        <div class="social">
-            <a class="inline-block transition on-active from-small delay04 time05" target="_blank" href="https://github.com/BSteffaniak"><img src="Shared/Images/github.svg"></img></a>
-            <a class="inline-block transition on-active from-small delay06 time05" target="_blank" href="https://linkedin.com/in/bradensteffaniak"><img src="Shared/Images/linkedin.svg"></img></a>
-            <a class="inline-block transition on-active from-small delay08 time05" target="_blank" href="http://stackoverflow.com/users/1305997/braden-steffaniak"><img src="Shared/Images/overflow.svg"></img></a>
-            <a class="inline-block transition on-active from-small delay10 time05" href="mailto:BradenSteffaniak@gmail.com"><img src="Shared/Images/gmail.svg"></img></a>
+<div id="cloud-container">
+    <img src="Shared/Images/cloudsbg-faded.jpg" style="position: fixed; left: 0; right: 0; bottom: 0;"></img>
+    <div id="profile" class="fullsize slide" ng-style="{ 'background-position': '50% ' + (!mobile ? (100 + scroll.top / 16) : '100%') + '%' }">
+        <div class="fullsize-background" style="background-image: url('Shared/Images/space.png'); background-position: 50% 0;"></div>
+        <div class="centered-vertically-relative" style="transform: translateY(-56%);">
+            <h1 id="braden" class="bold transition on-active from-top" style="color: white; margin: 0;"><span class="accentcolor1">br</span><span class="transition on-active from-invisible delay10 time30">a</span><span class="accentcolor1">d</span><span class="transition on-active from-invisible delay13 time30">e</span><span class="accentcolor1">n</span></h1>
+            <div class="profile-image transition on-active from-small" style="margin: auto; background-color: white;"><img src="Shared/Images/me-small.jpg"></img></div>
+            <div class="social">
+                <a class="inline-block transition on-active from-small delay04 time05" target="_blank" href="https://github.com/BSteffaniak"><img src="Shared/Images/github.svg"></img></a>
+                <a class="inline-block transition on-active from-small delay06 time05" target="_blank" href="https://linkedin.com/in/bradensteffaniak"><img src="Shared/Images/linkedin.svg"></img></a>
+                <a class="inline-block transition on-active from-small delay08 time05" target="_blank" href="http://stackoverflow.com/users/1305997/braden-steffaniak"><img src="Shared/Images/overflow.svg"></img></a>
+                <a class="inline-block transition on-active from-small delay10 time05" href="mailto:BradenSteffaniak@gmail.com"><img src="Shared/Images/gmail.svg"></img></a>
+            </div>
         </div>
     </div>
-</div>
-<div id="boeing" class="slide bgcolor4" ng-style="{ 'background-position': '50% ' + (!mobile ? (-slides.boeing.screenY / 2.5) + 'px' : '50%') }">
-    <img id="plane" class="transition from-left time20" src="Shared/Images/plane.png"></img>
-    <h1 class="transition from-left">Software Engineer at Boeing<!--<span class="shadow-text">Software Engineer at Boeing</span>--></h1>
-    <div class="date">
-        <h4 class="transition from-right">April 2015 - Present</h4>
+    <div id="boeing" class="slide">
+        <img id="plane" class="transition from-left time20" src="Shared/Images/plane.png"></img>
+        <h1 class="transition from-left">Software Engineer at Boeing<!--<span class="shadow-text">Software Engineer at Boeing</span>--></h1>
+        <div class="date">
+            <h4 class="transition from-right">April 2015 - Present</h4>
+        </div>
+        <p>I develop web pages and web applications in a team of developers using ASP.NET web forms on the server-side with AngularJS, D3.js, Bootstrap, and jQuery on the front-end. Many of the web pages require pulling and analyzing information from multiple different databases and organizing the data on the web page using an array of charting libraries I developed in-house using D3.js as the backbone. The code was managed on multiple git repositories.</p>
+        <p>I migrated the old ASP.NET web form architecture to the new ASP.NET MVC Razor architecture that improved the page load times by allowing the data on the pages to be received on demand through AJAX calls only when necessary.</p>
     </div>
-    <p>I develop web pages and web applications in a team of developers using ASP.NET web forms on the server-side with AngularJS, D3.js, Bootstrap, and jQuery on the front-end. Many of the web pages require pulling and analyzing information from multiple different databases and organizing the data on the web page using an array of charting libraries I developed in-house using D3.js as the backbone. The code was managed on multiple git repositories.</p>
-    <p>I migrated the old ASP.NET web form architecture to the new ASP.NET MVC Razor architecture that improved the page load times by allowing the data on the pages to be received on demand through AJAX calls only when necessary.</p>
 </div>
 <div id="nova" class="slide bgcolor2">
     <h1 class="right-align transition from-right"><a class="inline-block transition from-small delay07 time05" target="_blank" href="https://github.com/BSteffaniak/Nova"><img src="Shared/Images/github.svg"></img></a>Nova</h1>

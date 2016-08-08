@@ -257,15 +257,22 @@ h6 { font-size: 12px; }
 #profile {
 	text-align: center;
 	
-	background-color: #3765bb;
+	/*background-color: #3765bb;
 	background-image: url('Shared/Images/clouds.jpg');
-	background-position: 50% 100%;
+	background-position: 50% 100%;*/
+}
+
+#cloud-container {
+	/*background-image: url('Shared/Images/cloudsbg-faded.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 100%;*/
+	background-color: #1c4a89;
+	position: relative;
+	overflow: hidden;
 }
 
 #boeing {
-	background-image: url('Shared/Images/cloudsbg.jpg');
-	background-size: 300%;
-	background-repeat: no-repeat;
 }
 
 #boeing h1,
@@ -1125,7 +1132,7 @@ td.page-section.active > p {
 
 div.fullsize {
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	
 	/*overflow: auto;
 	overflow-x: hidden;*/
