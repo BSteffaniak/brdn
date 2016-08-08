@@ -544,11 +544,13 @@ h6 { font-size: 12px; }
 
 .shadow-text {
 	position: absolute;
-	left: 3px;
-	top: 3px;
+	left: 0px;
+	top: 0px;
 	color: black;
-	white-space: nowrap;
+	/*white-space: nowrap;*/
 	z-index: -1;
+	
+	transform: translate3d(3px, 3px, 0);
 	
 	-webkit-touch-callout: none; /* iOS Safari */
 	-webkit-user-select: none;   /* Chrome/Safari/Opera */
