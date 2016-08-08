@@ -136,7 +136,10 @@ app.directive('lazy', function() {
 				var type = children[i].tagName.toLowerCase();
 				
 				if (type == "li") {
-					statements.push(children[i].innerHTML);
+					d3.select(children[i]).selectAll("eval").each(function (d, i) {
+						this.innerHTML = eval(this.innerHTML);
+					});
+					statements.push(children[i].textContent);
 				}
 			}
 			
