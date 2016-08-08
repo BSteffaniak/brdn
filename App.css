@@ -73,6 +73,26 @@ Red #c94344 rgb(201, 67, 68)
     animation-timing-function: linear;
 }
 
+span.caret.active {
+	animation-name: unset;
+}
+
+span.caret {
+	animation-duration: 1.1s;
+	animation-name: caret-pulse;
+	animation-iteration-count: infinite;
+	
+	-webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
+	
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 @keyframes pulse {
 	from {
 		opacity: 1;
@@ -80,6 +100,28 @@ Red #c94344 rgb(201, 67, 68)
 
 	to {
 		opacity: 0.3;
+	}
+}
+
+@keyframes caret-pulse {
+	0% {
+		opacity: 1;
+	}
+	
+	40% {
+		opacity: 1;
+	}
+	
+	55% {
+		opacity: 0;
+	}
+	
+	85% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }
 
