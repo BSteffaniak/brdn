@@ -26,6 +26,14 @@ app.directive('lazy', function() {
 			elements[0].focus();
 		}
 	};
+}).directive('shadow', function() {
+	return {
+	    restrict: 'A',
+		scope: false,
+		link: function(scope, elements, attr) {
+			elements[0].innerHTML += "<span class='shadow-text'>" + elements[0].innerHTML + "</span>";
+		}
+	};
 }).directive('onEnter', function() {
 	return {
 	    restrict: 'A',
