@@ -1,5 +1,5 @@
-<div id="cloud-container">
-    <img src="Shared/Images/cloudsbg-faded.jpg" style="position: fixed; left: 0; right: 0; bottom: 0; max-width: 200%;"></img>
+<div id="cloud-container" class="slide full">
+    <img ng-if="slides['cloud-container'].rendering" src="Shared/Images/cloudsbg-faded.jpg" style="position: fixed; left: 0; right: 0; bottom: 0;"></img>
     <div id="profile" class="fullsize slide" ng-style="{ 'background-position': '50% ' + (!mobile ? (100 + scroll.top / 16) : '100%') + '%' }">
         <div class="fullsize-background" style="background-image: url('Shared/Images/space.png'); background-position: 50% 0;"></div>
         <div class="centered-vertically-relative" style="transform: translateY(-56%);">
@@ -126,23 +126,26 @@
     <p style="display: inline-block;" class="restricted-width">The gif shows how the bullets stop when coming into contact with any obsticles.</p>
     <p style="display: inline-block;" class="restricted-width">Fun fact: I modelled the map after my parent's neighborhood from google maps.</p>
 </div>
-<div id="wolfpaq" class="slide" ng-style="{ 'background-position': '50% ' + (!mobile ? (-slides.wolfpaq.screenY / 2.5) + 'px' : '50%') }">
-    <h1 class="inline-table transition from-left"><a class="inline-block transition from-small delay07 time05" target="_blank" href="http://wolfpaq.co"><img src="Shared/Images/link.svg"></img></a></h1>
-    <div class="inline-table">
-        <h1 class="transition from-left">Wolfpaq</h1>
-        <h4 class="date transition from-right">Sept 2014 - Present</h4>
+<div>
+    <img ng-if="slides.wolfpaq.rendering" src="Shared/Images/wolfpaq-bg.jpg" style="z-index: -100;" class="fixed-center"></img>
+    <div id="wolfpaq" class="slide">
+        <h1 class="inline-table transition from-left"><a class="inline-block transition from-small delay07 time05" target="_blank" href="http://wolfpaq.co"><img src="Shared/Images/link.svg"></img></a></h1>
+        <div class="inline-table">
+            <h1 class="transition from-left">Wolfpaq</h1>
+            <h4 class="date transition from-right">Sept 2014 - Present</h4>
+        </div>
+        <table>
+            <tr>
+                <td><img class="showcase-image transition from-bottom" src="Shared/Images/feed1.svg"></img></td>
+                <td>
+                    <p style="margin-bottom: 100px;"><span class="restricted-width">Wolfpaq is a social app startup that I co-founded. The idea (best explained on <a target="_blank" href="http://wolfpaq.co">the site</a>) in summary is that it is a casual get together app. The feed to the left shows what is going on in your "wolfpaqs".</span></p>
+                    <p style="text-align: right;"><span class="restricted-width">The app uses a REST server to receive and update data. The REST server was built with Java Spring Boot.</span></p>
+                    <p style="text-align: right;"><span class="restricted-width">I also developed <a target="_blank" href="http://wolfpaq.co">the wolfpaq website</a>.</span></p>
+                </td>
+                <td><img class="showcase-image transition from-top" src="Shared/Images/wolfpaq.svg"></img></td>
+            </tr>
+        </table>
     </div>
-    <table>
-        <tr>
-            <td><img class="showcase-image transition from-bottom" src="Shared/Images/feed1.svg"></img></td>
-            <td>
-                <p style="margin-bottom: 100px;"><span class="restricted-width">Wolfpaq is a social app startup that I co-founded. The idea (best explained on <a target="_blank" href="http://wolfpaq.co">the site</a>) in summary is that it is a casual get together app. The feed to the left shows what is going on in your "wolfpaqs".</span></p>
-                <p style="text-align: right;"><span class="restricted-width">The app uses a REST server to receive and update data. The REST server was built with Java Spring Boot.</span></p>
-                <p style="text-align: right;"><span class="restricted-width">I also developed <a target="_blank" href="http://wolfpaq.co">the wolfpaq website</a>.</span></p>
-            </td>
-            <td><img class="showcase-image transition from-top" src="Shared/Images/wolfpaq.svg"></img></td>
-        </tr>
-    </table>
 </div>
 <div id="this-website" class="slide bgcolor1">
     <h1 class="right-align transition from-right"><a class="inline-block transition from-small delay07 time05" target="_blank" href="https://github.com/BSteffaniak/brdn"><img src="Shared/Images/github.svg"></img></a>This website</h1>

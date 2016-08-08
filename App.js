@@ -512,10 +512,8 @@ app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http
 		
 		var slides = d3.selectAll(".slide")[0];
 		
-		var view = d3.select("div.view");
-		
 		function refreshSlides(apply) {
-			var scroll = view.node().scrollTop;
+			var scroll = document.body.scrollTop;
 			var scrollBottom = scroll + $(window).height();
 			
 			$scope.scroll.top = scroll;
@@ -526,14 +524,19 @@ app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http
 				var height = slides[i].offsetHeight;
 				var distance = Math.abs(scroll - y);
 				
-				d3.select(slides[i]).classed("active", distance < 100);
-				d3.select(slides[i]).classed("visible", y + $(window).height() / 3 < scrollBottom && y + height > scroll);
+				var slide = slides[i].id ? $scope.slides[slides[i].id] || {} : {};
+				
+				slide.screenY = y - scroll;
+				slide.active = distance < 100;
+				slide.visible = y + $(window).height() / 3 < scrollBottom && y + height > scroll;
+				slide.rendering = y - 700 < scrollBottom && y + height + 700 > scroll;
+				
+				d3.select(slides[i]).classed("active", slide.active)
+					.classed("visible", slide.visible)
+					.classed("rendering", slide.rendering);
 				
 				if (slides[i].id) {
-					$scope.slides[slides[i].id] = $scope.slides[slides[i].id] || {};
-					
-					var slide = $scope.slides[slides[i].id];
-					slide.screenY = y - scroll;
+					$scope.slides[slides[i].id] = slide;
 				}
 			}
 			
@@ -542,30 +545,9 @@ app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http
 			}
 		}
 		
-		view.on("scroll", refreshSlides);
+		window.addEventListener("scroll", refreshSlides, false);
 		
 		refreshSlides(false);
-		
-		/*var searchIndex = window.location.hash.indexOf("?");
-		
-		if (searchIndex > 0) {
-			var hash = window.location.hash.substring(searchIndex + 1);
-			
-			var params = hash.split("&").map(function (d) {
-				return d.split("=");
-			});
-			console.log(params)
-			if (params.length > 0) {
-				var first = params[0];
-				
-				if (first.length == 1) {
-					//$location.hash(first[0])
-					console.log(first[0])
-					//$anchorScroll();
-				}
-			}
-			console.log(params);
-		}*/
 	});
 	
 	$scope.$on('$stateChangeSuccess', function(next, current) {
