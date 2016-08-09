@@ -281,7 +281,7 @@ h1 img {
 	position: relative;
 }
 
-p, ul, ol { font-size: 10px; }
+p, ul, ol, * { font-size: 10px; }
 
 h1 { font-size: 28px; }
 h2 { font-size: 28px; }
@@ -469,7 +469,7 @@ h6 { font-size: 12px; }
 		top: 1px;
 	}
 	
-	p, ul, ol { font-size: 12px; }
+	p, ul, ol, * { font-size: 12px; }
 	
 	h1 { font-size: 45px; }
 	h2 { font-size: 34px; }
@@ -509,7 +509,7 @@ h6 { font-size: 12px; }
 		height: 47px;
 	}
 	
-	p, ul, ol { font-size: 15px; }
+	p, ul, ol, * { font-size: 15px; }
 	
 	h1 { font-size: 60px; }
 	h2 { font-size: 42px; }
@@ -562,7 +562,7 @@ h6 { font-size: 12px; }
 		top: 2px;
 	}
 	
-	p, ul, ol { font-size: 18px; }
+	p, ul, ol, * { font-size: 18px; }
 	
 	h1 { font-size: 70px; }
 	h2 { font-size: 50px; }
