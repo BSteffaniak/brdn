@@ -1,6 +1,6 @@
 <div id="cloud-container">
     <img ng-if="slides['profile'].rendering && slides['boeing'].rendering" src="Shared/Images/cloudsbg-faded.jpg" style="position: fixed; left: 0; right: 0; bottom: 0; max-width: 200%;"></img>
-    <div id="profile" class="fullsize slide" ng-style="{ 'background-position': '50% ' + (!mobile ? (100 + scroll.top / 16) : '100%') + '%' }">
+    <slide id="profile" class="fullsize" ng-model="slides.profile" ng-style="{ 'background-position': '50% ' + (!mobile ? (100 + scroll.top / 16) : '100%') + '%' }">
         <div class="fullsize-background" style="background-image: url('Shared/Images/space.png'); background-position: 50% 0;"></div>
         <div class="centered-vertically-relative" style="transform: translateY(-56%);">
             <h1 id="braden" class="bold transition on-active from-top" style="color: white; margin: 0;"><span class="accentcolor1">br</span><span class="transition on-active from-invisible delay10 time30">a</span><span class="accentcolor1">d</span><span class="transition on-active from-invisible delay13 time30">e</span><span class="accentcolor1">n</span></h1>
@@ -18,21 +18,44 @@
                 <a class="inline-block transition on-active from-small delay10 time05" href="mailto:BradenSteffaniak@gmail.com"><img src="Shared/Images/gmail.svg"></img></a>
             </div>
         </div>
-    </div>
-    <div id="boeing" class="slide">
+    </slide>
+    <slide id="boeing" ng-model="slides.boeing">
         <img id="plane" class="transition from-left time20" src="Shared/Images/plane.png"></img>
         <h1 class="transition from-left" shadow>Software Engineer at Boeing<!--<span class="shadow-text">Software Engineer at Boeing</span>--></h1>
         <div class="date">
-            <h4 class="transition from-right" shadow>April 2015 - Present</h4>
+            <h4 class="transition from-right" shadow>Apr 2015 - Present</h4>
         </div>
         <p>I develop web pages and web applications in a team of developers using ASP.NET web forms on the server-side with AngularJS, D3.js, Bootstrap, and jQuery on the front-end. Many of the web pages require pulling and analyzing information from multiple different databases and organizing the data on the web page using an array of charting libraries I developed in-house using D3.js as the backbone. The code was managed on multiple git repositories.</p>
         <p>I migrated the old ASP.NET web form architecture to the new ASP.NET MVC Razor architecture that improved the page load times by allowing the data on the pages to be received on demand through AJAX calls only when necessary.</p>
-    </div>
+    </slide>
 </div>
-<div ng-if="false" id="nova" class="slide bgcolor2">
+<slide id="typable" ng-model="slides.typable" class="bgcolor2" on-invisible="resetParagraphs()">
+    <h1 class="right-align"><a class="inline-block transition from-small delay07 time05" target="_blank" href="https://github.com/BSteffaniak/typable.js"><img src="Shared/Images/github.svg"></img></a> <span typable letter-delay="100" activate-on="slides.typable.visible" caret-on-active>typable.js</span></h1>
+    <div class="date">
+        <h4 class="right-align" typable start-delay="1000" letter-delay="100" activate-on="slides.typable.visible" caret-on-active>Aug 2016 - Present</h4>
+    </div>
+    <div typable paragraph letter-delay="15" activate-on="slides.typable.visible" on-completion="nextParagraph()" caret-on-active>
+        <li>typable.js is a light-weight AngularJS module that allows you to create a typewriter animation effect on text. There are several configurable options for how you want the text to display.</li>
+        <li>The module can be easily included into your own AngularJS projects.</li>
+    </div>
+    <p typable activate-on="paragraphCount == 1" on-completion="nextParagraph()" deactivate-on="!slides.typable.visible" screwups screwup-chance="5" letter-delay="40" caret-on-active>This paragraph has a 1/5 chance for the letter to be typed incorrectly.</p>
+    
+    <div class="terminal">
+        <span>{{ terminalSignature }}~$ <span typable activate-on="paragraphCount >= 2" on-completion="nextParagraph()" screwups caret-on-active>ls</span></span><br>
+        <span ng-show="paragraphCount > 2"><span class="white">log.txt</span>&nbsp;&nbsp;&nbsp;<span class="blue">brdn</span>&nbsp;&nbsp;&nbsp;<span class="blue">scripts</span></span><br>
+        <span ng-show="paragraphCount >= 3">{{ terminalSignature }}~$ <span typable start-delay="2000" activate-on="paragraphCount >= 3" on-completion="nextParagraph()" screwups caret-on-active>cd brdn</span></span><br>
+        <span ng-show="paragraphCount >= 4">{{ terminalSignature }}~/brdn$ <span typable start-delay="2000" activate-on="paragraphCount >= 4" on-completion="nextParagraph()" screwups caret-on-active>ls</span></span><br>
+        <span ng-show="paragraphCount > 4"><span class="white">App.css</span>&nbsp;&nbsp;&nbsp;<span class="white">App.js</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">Home</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">Shared</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="blue">Template</span></span><br>
+        <span ng-show="paragraphCount > 4"><span class="white">App.html</span>&nbsp;&nbsp;<span class="white">AppModule.js</span>&nbsp;&nbsp;<span class="white">RouteConfig.js</span>&nbsp;&nbsp;<span class="white">Sitemap.html</span></span><br>
+        <span ng-show="paragraphCount >= 5">{{ terminalSignature }}~/brdn$ <span typable start-delay="2000" activate-on="paragraphCount >= 5" on-completion="nextParagraph()" screwups caret-on-active>echo "hello, world"</span></span><br>
+        <span ng-show="paragraphCount > 5" class="white">hello, world</span><br>
+        <span ng-show="paragraphCount >= 6">{{ terminalSignature }}~/brdn$ <span typable></span></span><br>
+    </div>
+</slide>
+<slide ng-if="false" id="nova" ng-model="slides.nova" class="bgcolor2">
     <h1 class="right-align transition from-right"><a class="inline-block transition from-small delay07 time05" target="_blank" href="https://github.com/BSteffaniak/Nova"><img src="Shared/Images/github.svg"></img></a>Nova</h1>
     <div class="date">
-        <h4 class="right-align transition from-left">January 2014 - Present</h4>
+        <h4 class="right-align transition from-left">Jan 2014 - Present</h4>
     </div>
     
     <!-- pre tag contents have to be tabbed like this so the whitespace works right -->
@@ -76,8 +99,8 @@
             <p><span class="restricted-width">Nova is, and has always been, developed in my free time. The reason I am making it comes down to the fact that I wanted a cleaner syntax to work with.</span></p>
         </div>
     </div>
-</div>
-<div id="tdg" class="slide space-hog-md bgcolor3">
+</slide>
+<slide id="tdg" ng-model="slides.tdg" class="space-hog-md bgcolor3">
     <!--<div class="cloud" style="width: 100px; height: 50px;"></div>-->
     <div class="fullsize-background" style="background-image: url('Shared/Images/tdgbackground.png');"></div>
     <div class="fullsize-background shadows" style="background-image: url('Shared/Images/tdgbackground-shadows.png'); background-size: cover; background-position-x: center; position: absolute; left: 0; right: 0; top: 0; bottom: 0;"></div>
@@ -116,8 +139,8 @@
             </td>
         </tr>
     </table>
-</div>
-<div id="zombie-hunt" class="slide bgcolor4">
+</slide>
+<slide id="zombie-hunt" class="bgcolor4" ng-model="slides.zombieHunt">
     <div class="fullsize-background centered" style="background-image: url('Shared/Images/zombies5.jpg');"></div>
     <div class="fullsize-background centered" style="background-image: url('Shared/Images/zombies4.jpg');"></div>
     <div class="fullsize-background centered" style="background-image: url('Shared/Images/zombies3.jpg');"></div>
@@ -131,10 +154,10 @@
     <p style="display: inline-block;" class="restricted-width">Zombie Hunt is another video game that I made with Java and OpenGL. It's a typical zombie survival game without any real objective besides killing as many zombies as possible.</p>
     <p style="display: inline-block;" class="restricted-width">The gif shows how the bullets stop when coming into contact with any obsticles.</p>
     <p style="display: inline-block;" class="restricted-width">Fun fact: I modelled the map after my parent's neighborhood from google maps.</p>
-</div>
+</slide>
 <div>
     <img ng-if="slides.wolfpaq.rendering" class="fixed-full" style="z-index: -100; background-image: url('Shared/Images/wolfpaq-bg.jpg'); background-position: center; background-size: cover;"></img>
-    <div id="wolfpaq" class="slide">
+    <slide id="wolfpaq" ng-model="slides.wolfpaq">
         <h1 class="inline-table transition from-left"><a class="inline-block transition from-small delay07 time05" target="_blank" href="http://wolfpaq.co"><img src="Shared/Images/link.svg"></img></a></h1>
         <div class="inline-table">
             <h1 class="transition from-left">Wolfpaq</h1>
@@ -151,9 +174,9 @@
                 <td><img class="showcase-image transition from-top" src="Shared/Images/wolfpaq.svg"></img></td>
             </tr>
         </table>
-    </div>
+    </slide>
 </div>
-<div id="this-website" class="slide bgcolor1">
+<slide id="this-website" ng-model="slides.thisWebsite" class="bgcolor1">
     <h1 class="right-align transition from-right"><a class="inline-block transition from-small delay07 time05" target="_blank" href="https://github.com/BSteffaniak/brdn"><img src="Shared/Images/github.svg"></img></a>This website</h1>
     <div class="date">
         <h4 class="right-align transition from-left">Aug 2016 - Present</h4>
@@ -170,8 +193,8 @@
     <p>My web design skills are showcased through this website. The full code for this website can be seen from the <a target="_blank" href="https://github.com/BSteffaniak/brdn">GitHub repository</a>. Feel free to browse the code, notify me of any issues, fork it, and share it with those who might be interested.</p>
     <p>Just for fun, I added a webhook to the GitHub repository for whenever the master branch is changed to automatically update the production version of the site.</p>
     <p>PS - <a target="_blank" href="http://stackoverflow.com/a/2972349/1305997">It's pronounced "My Ess Que Ell"</a>, come on everyone...</p>
-</div>
-<div id="connect" class="slide bgcolor3">
+</slide>
+<slide id="connect" ng-model="slides.connect" class="bgcolor3">
     <h1>Connect with me</h1>
     <table class="connect">
         <tr>
@@ -207,4 +230,4 @@
             </td>
         </tr>
     </table>
-</div>
+</slide>

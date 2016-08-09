@@ -509,45 +509,6 @@ app.controller('App', [ '$timeout', '$window', '$interpolate', '$filter', '$http
 	
 	$scope.$on("$viewContentLoaded", function (event) {
 		updateHeaderPolarization();
-		
-		var slides = d3.selectAll(".slide")[0];
-		
-		function refreshSlides(apply) {
-			var scroll = document.body.scrollTop;
-			var scrollBottom = scroll + $(window).height();
-			
-			$scope.scroll.top = scroll;
-			$scope.scroll.bottom = scrollBottom;
-			
-			for (var i = 0; i < slides.length; i++) {
-				var y = slides[i].offsetTop;
-				var height = slides[i].offsetHeight;
-				var distance = Math.abs(scroll - y);
-				
-				var slide = slides[i].id ? $scope.slides[slides[i].id] || {} : {};
-				
-				slide.screenY = y - scroll;
-				slide.active = distance < 100;
-				slide.visible = y + $(window).height() / 3 < scrollBottom && y + height > scroll;
-				slide.rendering = y - 700 < scrollBottom && y + height + 700 > scroll;
-				
-				d3.select(slides[i]).classed("active", slide.active)
-					.classed("visible", slide.visible)
-					.classed("rendering", slide.rendering);
-				
-				if (slides[i].id) {
-					$scope.slides[slides[i].id] = slide;
-				}
-			}
-			
-			if (apply !== false) {
-				$scope.$apply();
-			}
-		}
-		
-		window.addEventListener("scroll", refreshSlides, false);
-		
-		refreshSlides(false);
 	});
 	
 	$scope.$on('$stateChangeSuccess', function(next, current) {

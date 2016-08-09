@@ -1,7 +1,15 @@
 app.controller('Home', [ '$scope', function($scope) {
-	d3.select("#next").on("click", function () {
-		$('div.view').animate({
-          scrollTop: $(window).height()
-        }, 1000);
-	});
+	$scope.paragraphCount = 0;
+	
+	$scope.nextParagraph = function () {
+		$scope.paragraphCount++;
+	};
+	
+	$scope.resetParagraphs = function () {
+		$scope.paragraphCount = 0;
+	};
+	
+	$scope.terminalSignature = "ubuntu@ip-192-168-1-101:";
+	
+	$scope.slides = {};
 }]);
