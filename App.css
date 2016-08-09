@@ -206,6 +206,8 @@ div.terminal,
 div.terminal *,
 div.terminal span {
 	font-family: monospace;
+	
+	font-size: 8px;
 }
 
 div.terminal > table {
@@ -486,6 +488,12 @@ h6, h6 * { font-size: 12px; }
 	div.terminal {
 		width: 550px;
 		height: 300px;
+	}
+	
+	div.terminal,
+	div.terminal *,
+	div.terminal span {
+		font-size: inherit;
 	}
 	
 	#braden * {
