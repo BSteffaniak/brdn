@@ -113,7 +113,7 @@
 					var stopOnCompletion = typeof attrs.stopOnCompletion !== 'undefined';
         			
 					$timeout(function () {
-						element.style("min-height", elements[0].offsetHeight + "px");
+						
 						
 						element.selectAll("eval").each(function (d, i) {
 							this.innerHTML = eval(this.innerHTML);
@@ -125,6 +125,8 @@
 							stopOnCompletion = true;
 							
 							statements.push(elements[0].textContent);
+							
+							element.style("min-height", elements[0].offsetHeight + "px");
 						} else {					
 		        			lis.each(function (d, i) {
 		        				var type = this.tagName.toLowerCase();
@@ -133,6 +135,8 @@
 		        					statements.push(this.textContent);
 		        				}
 		        			});
+							
+							element.style("min-height", lis[0][0].offsetHeight + "px");
 						}
 						
 	        			elements[0].innerHTML = "";
