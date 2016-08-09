@@ -251,9 +251,11 @@ span.caret {
 	padding: 0 10px;
 }
 
-#braden {
+#braden * {
 	font-size: 80px;
-	
+}
+
+#braden {
 	margin-top: 20px;
 	
 	line-height: 1;
@@ -443,7 +445,7 @@ h6 { font-size: 12px; }
 		padding: 0 20px;
 	}
 	
-	#braden {
+	#braden * {
 		font-size: 150px;
 	}
 	
@@ -484,7 +486,7 @@ h6 { font-size: 12px; }
 		padding: 0 50px;
 	}
 	
-	#braden {
+	#braden * {
 		font-size: 200px;
 	}
 	
@@ -536,7 +538,7 @@ h6 { font-size: 12px; }
 		padding: 0 200px;
 	}
 	
-	#braden {
+	#braden * {
 		font-size: 300px;
 	}
 	
